@@ -546,6 +546,180 @@
   </div>
 </div>
 
+<div class="modal__div modal__div-v2" id="authenticationModal2">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Двухфакторная аутентификация</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Двухфакторная аутентификация</div>
+
+        <div class="box-text">
+          <p>Отсканируйте QR-код с помощью приложения для аутентификации или скопируйте ключ и добавьте его вручную.</p>
+        </div>
+
+        <div class="add-balance">
+
+          <div class="qr-image"><img src="img/qr2.svg" alt=""></div>
+
+          <div class="qr-number">033KIE8888ENNC99</div>
+
+        </div>
+
+        <div class="box-text">
+          <p>Введите код из приложения двухфакторной аутентификации.</p>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Введите 6-значный код</p>
+          </div>
+          <label>
+            <input type="text" name="sum" required>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Включить</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div modal__div-v2" id="apiModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>API-ключ</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">API-ключ</div>
+
+      <div class="description-attention">
+        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+        <div class="description-attention__text">
+          <p>Сохраните API-ключ, мы покажем его всего один раз.</p>
+        </div>
+      </div>
+
+      <div class="add-balance">
+        <div class="qr-code api-code">
+          033KIE8888ENNC99033KIE8888ENNC99033KIE888<br>8ENNC99033KIE8888ENNC99033KIE8888ENNC990<br>33KIE8888ENNC99033KIE8888ENNC99033KI8EN
+        </div>
+        <div class="qr-code qr-code-mobile api-code">033KIE8888ENNC99033KIE8888<br>ENNC99033KIE8888ENNC99033<br>KIE8888ENNC99033KIE8888ENN<br>C99033KIE8888ENNC99033KIE8<br>888ENNC99033KI8EN</div>
+      </div>
+
+
+      <a href="#" class="btn btn-accent btn-md btn-submit">Скопировать</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal__div" id="editEmail">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Редактировать Email</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Редактировать Email</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Email</p>
+          </div>
+          <label>
+            <input type="text" name="mail" placeholder="example@gmail.com" required>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Сохранить</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="editPassword">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Сменить пароль</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Сменить пароль</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Старый пароль</p>
+          </div>
+          <label>
+            <input type="password" value="" class="input-password" name="password" required>
+            <a href="#" class="btn-view-password">
+              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
+              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+            </a>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Придумайте новый пароль</p>
+          </div>
+          <label>
+            <input type="password" value="" class="input-password" name="password" required>
+            <a href="#" class="btn-view-password">
+              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
+              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+            </a>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Повторите новый пароль</p>
+          </div>
+          <label>
+            <input type="password" value="" class="input-password" name="password" required>
+            <a href="#" class="btn-view-password">
+              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
+              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+            </a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Сменить пароль</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
 <!-- Пoдлoжкa -->
 <div class="overlay"></div>
 <div class="overlay-menu"></div>

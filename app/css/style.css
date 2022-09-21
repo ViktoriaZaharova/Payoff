@@ -391,6 +391,17 @@ a.color-accent:hover {
 .sidebar-body {
   width: 100%; }
 
+.sidebar-footer {
+  width: 100%;
+  display: none;
+  margin: 16px 0;
+  padding: 0 16px; }
+  .sidebar-footer .btn {
+    width: 100%;
+    margin: 0 0 16px; }
+    .sidebar-footer .btn:last-child {
+      margin: 0; }
+
 .btn-close-sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
