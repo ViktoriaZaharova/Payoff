@@ -95,13 +95,13 @@ input, textarea, select
 input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
   //border: 1px solid transparent
   -webkit-text-fill-color: #000
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset
+  -webkit-box-shadow: 0 0 0 1000px #fff inset
   transition: background-color 5000s ease-in-out 0s
   color: #000
   &:hover, &:focus
     //border: 1px solid transparent
     -webkit-text-fill-color: #000
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset
+    -webkit-box-shadow: 0 0 0 1000px #fff inset
     transition: background-color 5000s ease-in-out 0s
     color: #000
     opacity: 1
@@ -124,6 +124,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
 textarea
   resize: none
   height: 88px
+  padding: 16px
 
 label
   display: block
@@ -649,3 +650,26 @@ td
       stroke: #000
       width: 5px
       height: 10px
+
+.links-exit
+  display: flex
+  align-items: center
+  color: #000
+  padding: 14px 16px
+  font-size: 14px
+  font-weight: 500
+  line-height: 22px
+  &__icon
+    @include d-flex
+    margin: 0 10px 0 0
+    width: 20px
+    height: 20px
+    min-width: 20px
+
+.dropdown-cabinet
+  .dropdown-menu
+    min-width: 152px
+    left: auto
+    right: 0
+    transform: none
+

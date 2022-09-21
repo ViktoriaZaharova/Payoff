@@ -40,7 +40,28 @@
   position: relative;
   margin: 0 0 0 4px; }
   .tooltip-wrapper:hover .tooltip-box {
-    display: block; }
+    opacity: 1;
+    visibility: visible; }
+  .tooltip-wrapper:hover .btn-tooltip {
+    background: url("../img/question-icon-accent.svg") no-repeat center;
+      background-size: 100%; }
+    .tooltip-wrapper:hover .btn-tooltip img {
+      display: none; }
+
+.btn-tooltip {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer; }
 
 .tooltip-box {
   position: absolute;
@@ -58,7 +79,10 @@
   border-radius: 16px;
   white-space: nowrap;
   font-weight: 500;
-  display: none; }
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
   .tooltip-box:before {
     content: '';
     -webkit-clip-path: polygon(100% 0, 0 50%, 100% 100%);

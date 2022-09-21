@@ -27,7 +27,20 @@
   margin: 0 0 0 4px
   &:hover
     .tooltip-box
-      display: block
+      opacity: 1
+      visibility: visible
+    .btn-tooltip
+      background: url("../img/question-icon-accent.svg") no-repeat center
+        size: 100%
+      img
+        display: none
+
+.btn-tooltip
+  width: 16px
+  height: 16px
+  min-width: 16px
+  @include d-flex
+  cursor: pointer
 
 .tooltip-box
   position: absolute
@@ -43,7 +56,9 @@
   border-radius: 16px
   white-space: nowrap
   font-weight: 500
-  display: none
+  opacity: 0
+  visibility: hidden
+  transition: .3s ease
   &:before
     content: ''
     clip-path: polygon(100% 0, 0 50%, 100% 100%)

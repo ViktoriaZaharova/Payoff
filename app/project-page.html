@@ -39,7 +39,15 @@
         <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
 
       </div>
-      <a href="#" class="btn btn-cabinet btn-grey">M</a>
+      <div class="dropdown dropdown-cabinet">
+        <div class="btn btn-cabinet btn-grey dropdown-toggle">M</div>
+        <div class="dropdown-menu">
+          <a href="#" class="links-exit">
+            <span class="links-exit__icon"><img src="img/exit.svg" alt=""></span>
+            <span class="links-exit__text">Выход</span>
+          </a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -137,7 +145,7 @@
                   <div class="project-card-row__col">
                     <div class="balance-item">
                       <p>Баланс аккаунта</p>
-                      <div class="balance-item__val">40 000 000.00 ₽ <a href="#" class="btn-reverse"><img
+                      <div class="balance-item__val">40 000 000.00 ₽ <a href="#addBalance" class="btn-reverse open_modal"><img
                           src="img/plus-blue.svg"
                           alt=""></a></div>
                     </div>
