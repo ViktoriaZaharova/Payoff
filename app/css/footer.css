@@ -1,0 +1,213 @@
+@charset "UTF-8";
+/*==========  section modal ==========*/
+.overlay {
+  z-index: 100;
+  position: fixed;
+  background-color: #000;
+  opacity: 0.4;
+  -moz-opacity: 0.4;
+  filter: alpha(opacity=40);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: none; }
+
+.modal__div {
+  position: fixed;
+  max-width: 562px;
+  width: 100%;
+  height: 100%;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 101;
+  overflow: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: none;
+  opacity: 0; }
+  .modal__div h2 {
+    font-size: 24px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content; }
+  .modal__div-head {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 32px; }
+  .modal__div-body {
+    width: 100%;
+    padding: 0 32px 32px; }
+  .modal__div-footer {
+    width: 100%;
+    padding: 32px;
+    border-top: 1px solid #282828; }
+    .modal__div-footer .btn-group .btn {
+      margin: 0 24px 0 0; }
+      .modal__div-footer .btn-group .btn:last-child {
+        margin: 0; }
+
+.modal__close {
+  stroke: #000;
+  fill: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-left: auto; }
+
+.modal__wrapper {
+  background: #fff;
+  border: 1px solid #EAEAEA;
+    border-radius: 16px;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: 50px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
+
+.modal__div-body {
+  width: 100%; }
+
+.btn-submit {
+  margin: 32px 0 0;
+  width: 100%; }
+
+.description-attention {
+  width: 100%;
+  background: #FFF8E8;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 17px 16px;
+  font-size: 14px;
+  line-height: 22px;
+  margin: 0 0 32px; }
+  .description-attention__icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 10px 0 0;
+    width: 20px;
+    min-width: 20px; }
+  .description-attention__text p {
+    margin: 0 0 8px; }
+    .description-attention__text p:last-child {
+      margin: 0; }
+
+.add-balance {
+  text-align: center; }
+  .add-balance p {
+    font-weight: 500; }
+
+.qr-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 24px auto;
+  max-width: 206px;
+  width: 100%; }
+
+.qr-code {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 auto 24px; }
+
+.course-currency {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-weight: 500;
+  font-size: 16px; }
+  .course-currency p:after {
+    content: '·';
+    margin: 0 4px;
+    display: inline-block; }
+
+.modal-title__mobile {
+  width: 100%;
+  margin: 0 0 24px;
+  font-size: 24px;
+  font-weight: bold;
+  display: none; }
+
+.qr-code-mobile {
+  display: none; }
+
+.qr-number {
+  text-align: center;
+  padding: 8px 16px;
+  background: #F6F6F6;
+  border-radius: 30px;
+  font-weight: 500;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 32px; }
+
+.modal__div-v2 {
+  max-width: 603px; }
+  .modal__div-v2 .box-text {
+    line-height: 24px;
+    margin: 0 0 24px; }
+
+.api-code {
+  text-align: left; }
+
+/*==========  section modal end  ==========*/

@@ -1,0 +1,48 @@
+/*==========  section header ==========*/
+header {
+  -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  padding: 18px 0; }
+  header .container {
+    max-width: none; }
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 135px;
+  width: 100%;
+  margin: 0 auto 0 0; }
+  .logo img {
+    width: 100%; }
+
+.btn-cabinet {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  margin: 0 0 0 24px;
+  color: #142893;
+  font-size: 16px;
+  font-weight: 700; }
+
+.btn-burger {
+  margin: 0 24px 0 0;
+  width: 24px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+/*==========  section header end  ==========*/
+/*==========  section  ==========*/
+/*==========  section end  ==========*/

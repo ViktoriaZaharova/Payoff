@@ -1,0 +1,636 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+
+blockquote, q
+  quotes: none
+
+blockquote:before, blockquote:after, q:before, q:after
+  content: ''
+  content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: normal
+  font-family: $default-font
+  font-weight: normal
+  background: #fff
+  color: #000
+
+html, body
+  overflow-x: hidden
+  height: 100%
+  &.no-scroll
+    overflow: hidden
+
+img
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+a
+  display: block
+  text-decoration: none
+  transition: .3s ease
+  outline: none
+  width: fit-content
+  &:hover, &:focus
+    text-decoration: none
+
+input, textarea, select
+  outline: none
+  box-shadow: none
+  appearance: none
+  padding: 0 16px
+  box-sizing: border-box
+  font-family: $default-font
+  border: 1px solid #E2E2E2
+    radius: 8px
+  width: 100%
+  height: 56px
+  color: #000000
+  font-size: 16px
+  transition: .3s ease
+  &::placeholder
+    color: #000000
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+    border: 1.5px solid #142893
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+  //border: 1px solid transparent
+  -webkit-text-fill-color: #000
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset
+  transition: background-color 5000s ease-in-out 0s
+  color: #000
+  &:hover, &:focus
+    //border: 1px solid transparent
+    -webkit-text-fill-color: #000
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset
+    transition: background-color 5000s ease-in-out 0s
+    color: #000
+    opacity: 1
+    &::placeholder
+      color: #fff
+
+
+.input-title
+  color: #646464
+  width: 100%
+  margin: 0 0 8px
+  font-size: 14px
+
+.input-description
+  width: 100%
+  margin: 8px 0 0
+  color: #676767
+  font-size: 12px
+
+textarea
+  resize: none
+
+
+label
+  display: block
+  width: 100%
+  position: relative
+
+.form-row
+  margin: 0 0 32px
+  width: 100%
+
+  &:last-child
+    margin: 0
+
+.form
+  .btn-view-password
+    position: absolute
+    top: 50%
+    transform: translate(0,-50%)
+    right: 16px
+
+.btn-view-password
+  width: 20px
+  height: 20px
+  @include d-flex
+  fill: none
+  stroke: #8E8E8E
+
+  .svg-icon-hide
+    display: none
+  &.view
+    .svg-icon
+      display: none
+    .svg-icon-hide
+      display: flex
+
+button, .btn
+  outline: none
+  transition: .3s ease
+  cursor: pointer
+  box-shadow: none
+  font-family: $default-font
+  padding: 0
+  margin: 0
+  border: none
+    radius: 0
+
+  &:hover, &:focus
+    outline: none
+    box-shadow: none
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  padding: 13px 16px
+  font-size: 14px
+  font-weight: 600
+  border-radius: 12px
+  line-height: 22px
+
+.btn-accent
+  color: #fff
+  background: $accent
+
+  &:hover
+    background: $hover
+    color: #fff
+  &:disabled
+    background: #8E8E8E
+    color: #fff
+
+.btn-grey
+  background: #F6F6F6
+  color: #000000
+  &:hover
+    background: #EAEAEA
+    color: #000
+  &:disabled
+    background: #E2E2E2
+    color: #8E8E8E
+
+.btn-border
+  border: 1px solid #E2E2E2
+    radius: 12px
+  background: #fff
+  color: #000
+  font-size: 14px
+  font-weight: 600
+  line-height: 22px
+  padding: 8px 16px
+  .btn-icon
+    margin: 0 10px 0 0
+    @include d-flex
+    width: 20px
+    height: 20px
+    min-width: 20px
+  &:hover
+    background: #F6F6F6
+    border: 1px solid #E2E2E2
+    color: #000
+  &:disabled
+    background: #F6F6F6
+    color: #8E8E8E
+
+
+.btn-md
+  padding: 17px
+
+.svg-icon
+  display: inline-block
+  width: 100%
+  height: 100%
+
+strong, b
+  font-weight: bold
+  display: inline-block
+
+ul, ol
+  padding: 0 0 0 20px
+
+.my-ul
+  list-style: none
+  padding: 0
+
+
+h1
+  width: 100%
+  font-size: 24px
+  font-weight: bold
+  margin: 0 0 40px
+
+h2
+  font-size: 24px
+  font-weight: bold
+  width: 100%
+
+h3
+  font-weight: bold
+  font-size: 16px
+
+.title-wrapper
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 24px
+  h3
+    margin: 0 auto 0 0
+  h1
+    margin: 0 auto 0 0
+    width: fit-content
+
+.color-accent
+  color: #142893
+
+a.color-accent
+  &:hover
+    color: #000
+
+.container
+  padding: 0 24px
+  max-width: 1440px
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  position: relative
+  margin: 0 auto
+
+.btn-group
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  .btn
+    margin: 0 16px 0 0
+    &:last-child
+      margin: 0
+
+.wrapper
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.content
+  flex: 1 0 auto
+
+.content-wrapper
+  padding: 40px 0 28px
+  width: 100%
+  height: 100%
+
+.content-row
+  padding: 0 0 0 112px
+  width: calc(100% - 240px)
+
+.sidebar
+  max-width: 240px
+  width: 100%
+
+.sidebar-head
+  width: 100%
+  display: none
+  align-items: center
+  justify-content: space-between
+  padding: 24px
+  margin: 0 0 32px
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04)
+  background: #fff
+
+.sidebar-body
+  width: 100%
+
+.btn-close-sidebar
+  @include d-flex
+  margin: 0 24px 0 0
+  width: 16px
+  height: 16px
+  min-width: 16px
+
+.link
+  display: flex
+  align-items: center
+  font-size: 14px
+  font-weight: 500
+  color: #000
+  &:hover
+    color: $accent
+    .link-icon
+      stroke: $accent
+
+.link-icon
+  fill: none
+  stroke: #000
+  width: 5px
+  height: 11px
+  @include d-flex
+  margin: 0 0 0 11px
+
+.color-accent
+  color: $accent
+  &:hover
+    color: #000
+
+.mb-20
+  margin-bottom: 20px
+
+.col-3
+  width: 33.3%
+  padding: 0 10px
+
+.col-100
+  width: 100%
+  padding: 0 10px
+
+.row
+  margin: 0 -10px
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.bg-grey
+  background: #F6F6F6
+
+.bg-red
+  background: #FFECEC
+
+
+table
+  width: 100%
+  box-shadow: 0 0 0 1px #EAEAEA
+  border-collapse: collapse
+  border-style: hidden
+  border-radius: 16px
+  font-size: 16px
+  line-height: 24px
+
+thead
+  text-align: left
+  color: #646464
+  font-size: 14px
+  font-weight: 500
+  line-height: 22px
+  th
+    padding: 16px
+    &:first-child
+      padding: 12px 23px 12px 25px
+
+tr
+  border-bottom: 1px solid #EAEAEA
+  vertical-align: middle
+
+td
+  padding: 12px 0
+  &:first-child
+    width: 100px
+    padding: 12px 23px 12px 25px
+
+.status-wrapper
+  p
+    display: none
+    margin: 0 0 8px
+    color: #646464
+
+.status
+  padding: 5px 10px
+  font-size: 14px
+  font-weight: 500
+  line-height: 22px
+  width: fit-content
+  border-radius: 64px
+
+.status-on
+  color: #15B911
+  background: #EEFDEE
+
+.status-off
+  color: #646464
+  background: #F6F6F6
+
+.status-process
+  color: #E1A304
+  background: #FFF8E8
+
+.status-error
+  background: #FFECEC
+  color: #FD3131
+
+
+.dropdown
+  position: relative
+  cursor: pointer
+
+.dropdown-menu
+  position: absolute
+  left: 50%
+  top: 100%
+  transform: translate(-50%,0)
+  z-index: 3
+  max-width: 311px
+  width: 100%
+  background: #fff
+  border-radius: 8px
+  overflow: hidden
+  display: none
+  margin: 8px auto 0
+  box-shadow: 0 11px 28px rgba(0, 0, 0, 0.12)
+  &__head
+    display: flex
+    align-items: center
+    border-bottom: 1px solid #2E2E2E
+    padding: 20px
+    font-weight: 500
+    width: 100%
+  &__body
+    width: 100%
+
+.dropdown-menu__link
+  display: flex
+  align-items: center
+  color: #000000
+  padding: 12px 16px
+  font-size: 16px
+  line-height: 24px
+  width: 100%
+  border-top: 1px solid #EAEAEA
+  &:first-child
+    border: none
+  &-icon
+    @include d-flex
+    margin: 0 16px 0 0
+    width: 24px
+    height: 24px
+    min-width: 24px
+  &:hover
+    color: #fff
+    background: #2E2E2E
+
+
+.dropdown-toggle.active
+  .dropdown-toggle__icon
+    transform: rotate(180deg)
+
+
+.dropdown-select
+  .dropdown-toggle
+    background: #fff
+    border: 1px solid #E2E2E2
+      radius: 8px
+    padding: 16px 16px
+    line-height: 24px
+    display: flex
+    align-items: center
+    &__icon
+      margin-left: auto
+      width: 10px
+      height: 5px
+      min-width: 10px
+      @include d-flex
+      background: url("../img/arrow-select.svg") no-repeat center
+        size: 100%
+    &.active
+      border: 1.5px solid #142893
+        radius: 8px
+  .dropdown-menu
+    max-width: none
+    border-radius: 8px
+
+.input-password.click
+  border: 1.5px solid #142893
+
+.dropdown-sorting
+  .dropdown-toggle
+    display: flex
+    align-items: center
+    background: #fff
+    border: 1px solid #E2E2E2
+      radius: 20px
+    padding: 6px 12px
+    font-size: 14px
+    font-weight: 500
+    line-height: 22px
+    &__icon
+      margin-left: 10px
+      width: 10px
+      height: 5px
+      min-width: 10px
+      @include d-flex
+      background: url("../img/arrow-select.svg") no-repeat center
+        size: 100%
+  .dropdown-menu
+    min-width: 250px
+    left: 0
+    transform: none
+
+.sorting-wrapper
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  .dropdown
+    margin: 0 16px 24px 0
+    &:last-child
+      margin: 0 0 24px
+
+.tabs
+  width: 100%
+
+.tabs__content
+  display: none
+  &.active
+    display: block
+
+.tabs__caption
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin: 0 0 24px
+  border-bottom: 1px solid #EAEAEA
+  font-size: 14px
+  li
+    cursor: pointer
+    position: relative
+    padding: 0 0 12px
+    margin: 0 32px 0 0
+    display: flex
+    align-items: center
+    &:last-child
+      margin: 0
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      bottom: -1px
+      width: 0
+      height: 1px
+      background: #000000
+      transition: .3s ease
+    &.active
+      &:before
+        width: 100%
+
+
+.pagination
+  width: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: flex-end
+  font-size: 14px
+  font-weight: 500
+  li
+    a
+      color: #000
+      @include d-flex
+      width: 40px
+      height: 40px
+      min-width: 40px
+      text-align: center
+      border-radius: 12px
+      &:hover
+        color: $accent
+        background: #F6F6F6
+      &.active
+        background: #F6F6F6
+    .svg-icon
+      fill: none
+      stroke: #000
+      width: 5px
+      height: 10px

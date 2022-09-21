@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Payoff</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+  <header>
+    <div class="container">
+      <div class="btn-burger"><img src="img/burger.svg" alt=""></div>
+      <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+
+      <div class="btn-group">
+        <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
+        <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+
+      </div>
+      <a href="#" class="btn btn-cabinet btn-grey">M</a>
+    </div>
+  </header>
+
+  <div class="content">
+    <section class="content-wrapper">
+      <div class="container">
+        <div class="sidebar">
+          <div class="sidebar-head">
+            <div class="btn-close-sidebar">
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#close"></use>
+              </svg>
+            </div>
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+          </div>
+          <div class="sidebar-body">
+            <div class="balance-item">
+              <p>Общий баланс
+                <span class="tooltip-wrapper">
+              <span class="btn-tooltip"><img src="img/question-icon.svg" alt=""></span>
+              <span class="tooltip-box">Баланс проектов + Аккаунт</span>
+            </span>
+              </p>
+              <div class="balance-item__val">4 000.00 ₽</div>
+            </div>
+
+            <div class="balance-item">
+              <p>Баланс аккаунта</p>
+              <div class="balance-item__val">40 000 000.00 ₽ <a href="#" class="btn-reverse"><img
+                  src="img/reverse-icon.svg"
+                  alt=""></a></div>
+            </div>
+
+            <ul class="menu my-ul">
+              <li>
+                <a href="index.html">
+                  <span class="menu-icon"><img src="img/home-icon.svg" alt=""></span>
+                  <span class="menu-text">Главная</span>
+                </a>
+              </li>
+              <li>
+                <a href="projects.html">
+                  <span class="menu-icon"><img src="img/project-icon.svg" alt=""></span>
+                  <span class="menu-text">Проекты</span>
+                </a>
+              </li>
+              <li>
+                <a href="history.html">
+                  <span class="menu-icon"><img src="img/file-icon.svg" alt=""></span>
+                  <span class="menu-text">История выплат</span>
+                </a>
+              </li>
+              <li>
+                <a href="settings.html">
+                  <span class="menu-icon"><img src="img/settings-icon.svg" alt=""></span>
+                  <span class="menu-text">Настройка аккаунта</span>
+                </a>
+              </li>
+              <li>
+                <a href="developer.html">
+                  <span class="menu-icon"><img src="img/terminal.svg" alt=""></span>
+                  <span class="menu-text">Для разработчиков</span>
+                </a>
+              </li>
+              <li>
+                <a href="help.html">
+                  <span class="menu-icon"><img src="img/help-icon.svg" alt=""></span>
+                  <span class="menu-text">Служба поддержки</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="content-row">
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h1>Настройки аккаунта</h1>
+            </div>
+
+
+            <div class="row">
+              <div class="col-100 mb-20">
+                <div class="settings-box">
+                  <div class="settings-box__icon bg-grey"><img src="img/mail.svg" alt=""></div>
+                  <div class="settings-box__body">
+                    <p>Email адрес</p><span>example@gmail.com</span>
+                  </div>
+                  <div class="settings-box__footer">
+                    <a href="#editEmail" class="link-edit link open_modal">
+                      <span class="link-edit__icon"><img src="img/edit.svg" alt=""></span>
+                      <span class="link-edit__text">Редактировать</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-100 mb-20">
+                <div class="settings-box">
+                  <div class="settings-box__icon bg-grey"><img src="img/lock.svg" alt=""></div>
+                  <div class="settings-box__body">
+                    <p>Пароль</p><span>Изменен 02.02.2022</span>
+                  </div>
+                  <div class="settings-box__footer">
+                    <a href="#editPassword" class="link-edit link open_modal">
+                      <span class="link-edit__text">Сменить пароль</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-100 mb-20">
+                <div class="settings-box">
+                  <div class="settings-box__icon bg-grey"><img src="img/key.svg" alt=""></div>
+                  <div class="settings-box__body">
+                    <p>API-ключ</p><span>API-ключ можно выпустить только при включенном 2ФА</span>
+                  </div>
+                  <div class="settings-box__footer">
+                    <a href="#apiModal" class="btn btn-accent open_modal">
+                      Выпустить
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-100 mb-20">
+                <div class="settings-box">
+                  <div class="settings-box__icon bg-grey"><img src="img/shield.svg" alt=""></div>
+                  <div class="settings-box__body">
+                    <p>Двухфакторная аутентификация</p><span>Дополнительная защита при входе с использованием генерируемых кодов.</span>
+                  </div>
+                  <div class="settings-box__footer">
+                    <a href="#authenticationModal2" class="btn btn-accent open_modal">
+                      Включить
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<div class="modal__div" id="balanceModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Подать объявление</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">Подать объявление</div>
+
+      <div class="description-attention">
+        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+        <div class="description-attention__text">
+          <p>Минимальная сумма пополнения 15 USDT</p>
+        </div>
+      </div>
+
+      <div class="add-balance">
+        <p>Ваш USDT (TRC-20)
+          адрес</p>
+
+        <div class="qr-image"><img src="img/qr.svg" alt=""></div>
+
+        <div class="qr-code">TPk6cEqDWFcYKNyAuLC2FhNRknPW7qeYfg</div>
+        <div class="qr-code qr-code-mobile">TPk6cEqDWFcYKNyAuLC2<br>FhNRknPW7qeYfg</div>
+
+        <div class="course-currency">
+          <p>Курс USDT</p>
+          <div class="sum-wrapper">
+            <div class="sum">59.63 ₽</div>
+            <div class="sum-course">−0.04 (0,06 %)</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">Пополнить баланс</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal__div" id="payModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Создать выплату</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Создать выплату</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Источник выплаты</p>
+          </div>
+          <div class="dropdown dropdown-select">
+            <div class="dropdown-toggle">Счёт аккаунта · 40 000 000.00 ₽
+              <div class="dropdown-toggle__icon"></div>
+            </div>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Счёт аккаунта · 40 000 000.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Проект · 40 000.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Криптопроект · 800.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Крипто · 0.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Криптопроект · 6 500.00 ₽</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Метод</p>
+          </div>
+          <div class="dropdown dropdown-select">
+            <div class="dropdown-toggle">Выбрать метод...
+              <div class="dropdown-toggle__icon"></div>
+            </div>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-icon"><img src="img/qiwi-icon.svg" alt=""></span>
+                <span class="dropdown-menu__link-text">QIWI</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-icon"><img src="img/yoomoney.svg" alt=""></span>
+                <span class="dropdown-menu__link-text">YooMoney</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-icon"><img src="img/card.svg" alt=""></span>
+                <span class="dropdown-menu__link-text">Банковская карта</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Номер счета</p>
+          </div>
+          <label>
+            <input type="text" name="number_check" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Сумма</p>
+          </div>
+          <label>
+            <input type="text" name="sum" required>
+          </label>
+          <div class="input-description">Размер комиссии зависит от выбранного метода и суммы.</div>
+        </div>
+
+        <div class="description-attention">
+          <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+          <div class="description-attention__text">
+            <p>Минимальная сумма вывода — 1 000 ₽</p>
+            <p>Максимальная сумма вывода — 75 000 ₽</p>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Создать выплату</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="addBalance">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Перевод средств</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Перевод средств</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Источник перевода</p>
+          </div>
+          <div class="dropdown dropdown-select">
+            <div class="dropdown-toggle">Счёт аккаунта · 40 000 000.00 ₽
+              <div class="dropdown-toggle__icon"></div>
+            </div>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Счёт аккаунта · 40 000 000.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Проект · 40 000.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Криптопроект · 800.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Крипто · 0.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Криптопроект · 6 500.00 ₽</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Счёт зачисления</p>
+          </div>
+          <div class="dropdown dropdown-select">
+            <div class="dropdown-toggle">Проект 1 · 40.00 ₽
+              <div class="dropdown-toggle__icon"></div>
+            </div>
+            <div class="dropdown-menu">
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Счёт аккаунта · 40 000 000.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Проект · 40 000.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Криптопроект · 800.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Крипто · 0.00 ₽</span>
+              </a>
+              <a href="#" class="dropdown-menu__link">
+                <span class="dropdown-menu__link-text">Криптопроект · 6 500.00 ₽</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Сумма</p>
+          </div>
+          <label>
+            <input type="text" name="sum" required>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Перевести</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="authenticationModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Двухфакторная аутентификация</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Двухфакторная аутентификация</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Введите 6-значный код</p>
+          </div>
+          <label>
+            <input type="text" name="sum" required>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Подтвердить</button>
+
+        <div class="form-footer">
+          <a href="#" class="color-accent">Проблемы с входом?</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="addProject">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Создать проект</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Создать проект</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Название проекта</p>
+          </div>
+          <label>
+            <input type="text" name="name_project" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Домен проекта</p>
+          </div>
+          <label>
+            <input type="text" name="domen_project" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Webhook URL</p>
+          </div>
+          <label>
+            <input type="text" name="web_project" required>
+          </label>
+          <div class="input-description">Webhook URL можно указать в настройках проекта позже.</div>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Создать проект</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="editProject">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Редактировать проект</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Редактировать проект</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Название проекта</p>
+          </div>
+          <label>
+            <input type="text" name="name_project" placeholder="Крипто" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Домен проекта</p>
+          </div>
+          <label>
+            <input type="text" name="domen_project" placeholder="Project1" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Webhook URL</p>
+          </div>
+          <label>
+            <input type="text" name="web_project" placeholder="https://www.google.com/search?q=balance" required>
+          </label>
+          <div class="input-description">Webhook URL можно указать в настройках проекта позже.</div>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Сохранить проект</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="detailsInfo">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <!--      <h2>Редактировать проект</h2>-->
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+
+      <ul class="list-payment-details my-ul">
+        <li>
+          <p>ID</p>
+          <span>5418844</span>
+        </li>
+        <li>
+          <p>Сумма</p>
+          <span>8 000 ₽</span>
+        </li>
+        <li>
+          <p>Метод</p>
+          <span>Банковская карта</span>
+        </li>
+        <li>
+          <p>Проект</p>
+          <span>Криптопроект</span>
+        </li>
+        <li>
+          <p>Счет</p>
+          <span>2202 2456 8555 4785</span>
+        </li>
+        <li>
+          <p>Дата</p>
+          <span>03.10.2022</span>
+        </li>
+        <li>
+          <p>Статус</p>
+          <div class="status status-on">Успешно</div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal__div" id="detailsInfo2">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <!--      <h2>Редактировать проект</h2>-->
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+
+      <ul class="list-payment-details my-ul">
+        <li>
+          <p>ID</p>
+          <span>5418844</span>
+        </li>
+        <li>
+          <p>Сумма</p>
+          <span>50 USDT</span>
+        </li>
+        <li>
+        <li>
+          <p>Сумма в рублях</p>
+          <span>48 000 ₽</span>
+        </li>
+        <li>
+          <p>Метод</p>
+          <span>USDT (TRC-20)</span>
+        </li>
+        <li>
+          <p>Проект</p>
+          <span>Криптопроект</span>
+        </li>
+        <li>
+          <p>Курс пополнения</p>
+          <span>59.63 ₽</span>
+        </li>
+        <li>
+          <p>Дата</p>
+          <span>03.10.2022</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal__div modal__div-v2" id="authenticationModal2">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Двухфакторная аутентификация</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Двухфакторная аутентификация</div>
+
+        <div class="box-text">
+          <p>Отсканируйте QR-код с помощью приложения для аутентификации или скопируйте ключ и добавьте его вручную.</p>
+        </div>
+
+        <div class="add-balance">
+
+          <div class="qr-image"><img src="img/qr2.svg" alt=""></div>
+
+          <div class="qr-number">033KIE8888ENNC99</div>
+
+        </div>
+
+        <div class="box-text">
+          <p>Введите код из приложения двухфакторной аутентификации.</p>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Введите 6-значный код</p>
+          </div>
+          <label>
+            <input type="text" name="sum" required>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Включить</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div modal__div-v2" id="apiModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>API-ключ</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">API-ключ</div>
+
+      <div class="description-attention">
+        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+        <div class="description-attention__text">
+          <p>Сохраните API-ключ, мы покажем его всего один раз.</p>
+        </div>
+      </div>
+
+      <div class="add-balance">
+        <div class="qr-code api-code">
+          033KIE8888ENNC99033KIE8888ENNC99033KIE888<br>8ENNC99033KIE8888ENNC99033KIE8888ENNC990<br>33KIE8888ENNC99033KIE8888ENNC99033KI8EN
+        </div>
+        <div class="qr-code qr-code-mobile api-code">033KIE8888ENNC99033KIE8888<br>ENNC99033KIE8888ENNC99033<br>KIE8888ENNC99033KIE8888ENN<br>C99033KIE8888ENNC99033KIE8<br>888ENNC99033KI8EN</div>
+      </div>
+
+
+      <a href="#" class="btn btn-accent btn-md btn-submit">Скопировать</a>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal__div" id="editEmail">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Редактировать Email</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Редактировать Email</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Email</p>
+          </div>
+          <label>
+            <input type="text" name="mail" placeholder="example@gmail.com" required>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Сохранить</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div" id="editPassword">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Сменить пароль</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Сменить пароль</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Старый пароль</p>
+          </div>
+          <label>
+            <input type="password" value="" class="input-password" name="password" required>
+            <a href="#" class="btn-view-password">
+              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
+              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+            </a>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Придумайте новый пароль</p>
+          </div>
+          <label>
+            <input type="password" value="" class="input-password" name="password" required>
+            <a href="#" class="btn-view-password">
+              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
+              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+            </a>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Повторите новый пароль</p>
+          </div>
+          <label>
+            <input type="password" value="" class="input-password" name="password" required>
+            <a href="#" class="btn-view-password">
+              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
+              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+            </a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-md btn-submit">Сменить пароль</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- Пoдлoжкa -->
+<div class="overlay"></div>
+<div class="overlay-menu"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+
+</html>
