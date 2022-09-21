@@ -357,7 +357,50 @@
   </div>
 </div>
 
-<div class="modal__div" id="addProject">
+<div class="modal__div modal__div-v3" id="addProject">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Создать проект</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Создать проект</div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Название проекта</p>
+          </div>
+          <label>
+            <input type="text" name="name_project" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <div class="input-title">
+            <p>Описание проекта</p>
+          </div>
+          <label>
+            <textarea name="message"></textarea>
+          </label>
+        </div>
+
+        <div class="btn-group">
+          <a href="#addProject2" class="btn btn-accent btn-md btn-submit open_modal">Создать проект</a>
+          <a href="#" class="btn btn-border btn-md btn-submit btn-close-modal">Назад</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div modal__div-v3" id="addProject2">
   <div class="modal__wrapper">
     <div class="modal__div-head">
       <h2>Создать проект</h2>
@@ -392,18 +435,140 @@
 
         <div class="form-row">
           <div class="input-title">
-            <p>Webhook URL</p>
+            <p>Описание проекта</p>
           </div>
           <label>
-            <input type="text" name="web_project" required>
+            <textarea name="message"></textarea>
           </label>
-          <div class="input-description">Webhook URL можно указать в настройках проекта позже.</div>
         </div>
 
-        <button type="submit" class="btn btn-accent btn-md btn-submit">Создать проект</button>
+        <div class="btn-group">
+          <a href="#addProject3" class="btn btn-accent btn-md btn-submit open_modal">Далее</a>
+          <a href="#addProject2" class="btn btn-border btn-md btn-submit open_modal">Назад</a>
+        </div>
       </div>
 
     </form>
+  </div>
+</div>
+
+<div class="modal__div modal__div-v3" id="addProject3">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Создать проект</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <form method="post" class="form modal-form">
+      <div class="modal__div-body">
+        <div class="modal-title__mobile">Создать проект</div>
+
+        <div class="radio-wrapper">
+          <label class="radio-project">
+            <input type="radio" name="radio" checked>
+            <span class="radio-project__text">У меня есть сайт</span>
+          </label>
+          <label class="radio-project">
+            <input type="radio" name="radio">
+            <span class="radio-project__text">У меня нет сайта</span>
+          </label>
+        </div>
+
+        <a href="#addProject4" class="btn btn-accent btn-md btn-submit open_modal">Далее</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div class="modal__div modal__div-v3" id="addProject4">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Создать проект</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">Создать проект</div>
+
+      <div class="panel_heading in">
+        <div class="block_title">
+          <h3>Подтверждение с помощью МЕТА-ТЕГА</h3>
+        </div>
+        <div class="block_hover">
+          <ol>
+            <li>
+              <p>Добавьте перед закрывающим тэгом &lt;/head&gt; следующий код:</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="panel_heading in">
+        <div class="block_title">
+          <h3>Подтверждение с помощью HTML-файла</h3>
+        </div>
+        <div class="block_hover">
+          <ol>
+            <li>
+              <p>Скачайте TXT-файл</p>
+
+              <div class="copy-file">
+                <a href="#" target="_blank" download="#" class="copy-file__text color-accent">1991602251455oXiltr5qQtC43QU8MF3O<br>wVP1Xd3sYQsp.txt</a>
+
+                <a href="#" class="btn btn-border btn-download" download="#" target="_blank">
+                  <span class="btn-download__icon"><img src="img/download.svg" alt=""></span>
+                  <span class="btn-download__text">Скачать</span>
+                </a>
+              </div>
+            </li>
+            <li><p>Загрузите его в корневой каталог вашего веб-сервера</p></li>
+            <li>
+              <p>Убедитесь, что загруженный файл открывается по адресу</p>
+              <a href="#" class="color-accent link-web">https://test-rau.ru/1991602251455oXiltr5qQtC43QU8MF3O<br>wVP1Xd3sYQsp.txt</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+
+      <div class="btn-group">
+        <a href="#moderation" class="btn btn-accent btn-md btn-submit open_modal">Создать проект</a>
+        <a href="#addProject4" class="btn btn-border btn-md btn-submit open_modal">Назад</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal__div modal__div-v3" id="moderation">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Модерация</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">Модерация</div>
+
+      <div class="box-text">
+        <p>Проект отправлен на модерацию.</p>
+        <p>Вы получите ответ на электронную почту.</p>
+      </div>
+
+      <a href="#" class="btn btn-accent btn-md btn-submit btn-close-modal">Понятно</a>
+    </div>
   </div>
 </div>
 

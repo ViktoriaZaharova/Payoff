@@ -131,7 +131,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
   font-size: 12px; }
 
 textarea {
-  resize: none; }
+  resize: none;
+  height: 88px; }
 
 label {
   display: block;
@@ -214,9 +215,11 @@ button, .btn {
   .btn-accent:hover {
     background: #0D1E7D;
     color: #fff; }
-  .btn-accent:disabled {
+  .btn-accent:disabled, .btn-accent.disabled {
     background: #8E8E8E;
     color: #fff; }
+  .btn-accent.disabled {
+    pointer-events: none; }
 
 .btn-grey {
   background: #F6F6F6;
@@ -224,9 +227,11 @@ button, .btn {
   .btn-grey:hover {
     background: #EAEAEA;
     color: #000; }
-  .btn-grey:disabled {
+  .btn-grey:disabled, .btn-grey.disabled {
     background: #E2E2E2;
     color: #8E8E8E; }
+  .btn-grey.disabled {
+    pointer-events: none; }
 
 .btn-border {
   border: 1px solid #E2E2E2;

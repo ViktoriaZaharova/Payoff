@@ -45,9 +45,7 @@ $(document).mouseup(function (e) { // событие клика по веб-до
 $('.form-search input').on('keyup change', function() {
     if (this.value.length > 0) {
         $(this).parents('.form-search').addClass('active');
-        // $(this).parents('.search-wrapper').find('.search-result').fadeIn();
     } else {
-        // $(this).parents('.search-wrapper').find('.search-result').fadeOut();
         $(this).parents('.form-search').removeClass('active');
     }
 });
@@ -56,7 +54,6 @@ $('.clear-search').on('click', function (e) {
     e.preventDefault();
     $(this).parents('.form-search').removeClass('active');
     $(this).parents('.form-search').find('input').val('');
-    // $(this).parents().find('.search-result').fadeOut();
 });
 
 
@@ -119,3 +116,19 @@ $('.menu li a').each(function () {
     }
 });
 // end
+
+
+// accordeon
+function accordeon() {
+    var panel = $('.panel_heading');
+
+    if (panel.hasClass('in')) {
+        $('.in').find('.block_hover').slideDown();
+    }
+
+    $('.panel_heading .block_title').on('click', function () {
+        $(this).parent().toggleClass('in').find('.block_hover').slideToggle();
+    });
+}
+
+accordeon();

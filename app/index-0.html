@@ -35,8 +35,8 @@
       <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
 
       <div class="btn-group">
-        <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
-        <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+        <a href="#payModal" class="btn btn-grey open_modal disabled">Создать выплату</a>
+        <a href="#balanceModal" class="btn btn-accent open_modal disabled">Пополнить баланс</a>
 
       </div>
       <a href="#" class="btn btn-cabinet btn-grey">M</a>
@@ -69,13 +69,13 @@
             <div class="balance-item">
               <p>Баланс аккаунта</p>
               <div class="balance-item__val">40 000 000.00 ₽ <a href="#" class="btn-reverse"><img
-                  src="img/reverse-icon.svg"
+                  src="img/reverse-icon-0.svg"
                   alt=""></a></div>
             </div>
 
             <ul class="menu my-ul">
               <li>
-                <a href="index.html">
+                <a href="index.html" class="active">
                   <span class="menu-icon"><img src="img/home-icon.svg" alt=""></span>
                   <span class="menu-text">Главная</span>
                 </a>
@@ -112,73 +112,78 @@
               </li>
             </ul>
           </div>
-
           <div class="sidebar-footer">
-            <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
-            <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+            <a href="#payModal" class="btn btn-grey open_modal disabled">Создать выплату</a>
+            <a href="#balanceModal" class="btn btn-accent open_modal disabled">Пополнить баланс</a>
           </div>
         </div>
         <div class="content-row">
+          <h1>Главная</h1>
+
           <div class="home-category">
             <div class="title-wrapper">
-              <h1>Настройки аккаунта</h1>
-            </div>
+              <h3>Проекты</h3>
 
+            </div>
 
             <div class="row">
               <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/mail.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Email адрес</p><span>example@gmail.com</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#editEmail" class="link-edit link open_modal">
-                      <span class="link-edit__icon"><img src="img/edit.svg" alt=""></span>
-                      <span class="link-edit__text">Редактировать</span>
-                    </a>
+                <div class="description-attention">
+                  <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+                  <div class="description-attention__text">
+                    <p>Чтобы пополнить баланс, необходимо наличие активного проекта</p>
                   </div>
                 </div>
               </div>
-              <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/lock.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Пароль</p><span>Изменен 02.02.2022</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#editPassword" class="link-edit link open_modal">
-                      <span class="link-edit__text">Сменить пароль</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            </div>
+          </div>
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h3>Тарифы</h3>
+            </div>
 
+            <div class="row">
               <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/key.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>API-ключ</p><span>API-ключ можно выпустить только при включенном 2ФА</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#apiModal" class="btn btn-accent open_modal">
-                      Выпустить
-                    </a>
+                <div class="zero-box">
+                  <div class="zero-box__icon"><img src="img/folder.svg" alt=""></div>
+                  <p>Сначала создайте проект</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h3>Курс</h3>
+            </div>
+
+            <div class="row">
+              <div class="col-100 mb-20">
+                <div class="tariffs-card">
+                  <div class="tariffs-card__icon bg-red"><img src="img/arrow-download.svg" alt=""></div>
+                  <div class="tariffs-card__body">
+                    <div class="tariffs-card__name"><p>USDT</p></div>
+                    <div class="tariffs-card__description">
+                      <div class="sum-wrapper">
+                        <div class="sum">59.63 ₽</div>
+                        <div class="sum-course">−0.04 (0,06 %)</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h3>Последние выплаты</h3>
+            </div>
+
+            <div class="row">
               <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/shield.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Двухфакторная аутентификация</p><span>Дополнительная защита при входе с использованием генерируемых кодов.</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#authenticationModal2" class="btn btn-accent open_modal">
-                      Включить
-                    </a>
-                  </div>
+                <div class="zero-box">
+                  <div class="zero-box__icon"><img src="img/folder.svg" alt=""></div>
+                  <p>У вас еще нет выплат</p>
                 </div>
               </div>
             </div>

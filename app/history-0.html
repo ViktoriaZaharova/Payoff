@@ -35,8 +35,8 @@
       <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
 
       <div class="btn-group">
-        <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
-        <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+        <a href="#payModal" class="btn btn-grey open_modal disabled">Создать выплату</a>
+        <a href="#balanceModal" class="btn btn-accent open_modal disabled">Пополнить баланс</a>
 
       </div>
       <a href="#" class="btn btn-cabinet btn-grey">M</a>
@@ -69,7 +69,7 @@
             <div class="balance-item">
               <p>Баланс аккаунта</p>
               <div class="balance-item__val">40 000 000.00 ₽ <a href="#" class="btn-reverse"><img
-                  src="img/reverse-icon.svg"
+                  src="img/reverse-icon-0.svg"
                   alt=""></a></div>
             </div>
 
@@ -112,72 +112,46 @@
               </li>
             </ul>
           </div>
-
           <div class="sidebar-footer">
-            <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
-            <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+            <a href="#payModal" class="btn btn-grey open_modal disabled">Создать выплату</a>
+            <a href="#balanceModal" class="btn btn-accent open_modal disabled">Пополнить баланс</a>
           </div>
         </div>
         <div class="content-row">
+
           <div class="home-category">
             <div class="title-wrapper">
-              <h1>Настройки аккаунта</h1>
+              <h1>История выплат</h1>
             </div>
 
 
-            <div class="row">
-              <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/mail.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Email адрес</p><span>example@gmail.com</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#editEmail" class="link-edit link open_modal">
-                      <span class="link-edit__icon"><img src="img/edit.svg" alt=""></span>
-                      <span class="link-edit__text">Редактировать</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/lock.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Пароль</p><span>Изменен 02.02.2022</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#editPassword" class="link-edit link open_modal">
-                      <span class="link-edit__text">Сменить пароль</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="tabs">
+              <ul class="tabs__caption my-ul">
+                <li class="active">
+                  <p>Выплаты</p>
+                </li>
+                <li>
+                  <p>Пополнения</p>
+                </li>
+              </ul>
 
-              <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/key.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>API-ключ</p><span>API-ключ можно выпустить только при включенном 2ФА</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#apiModal" class="btn btn-accent open_modal">
-                      Выпустить
-                    </a>
+              <div class="tabs__content active">
+                <div class="row">
+                  <div class="col-100 mb-20">
+                    <div class="zero-box">
+                      <div class="zero-box__icon"><img src="img/folder.svg" alt=""></div>
+                      <p>У вас еще нет выплат</p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/shield.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Двухфакторная аутентификация</p><span>Дополнительная защита при входе с использованием генерируемых кодов.</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#authenticationModal2" class="btn btn-accent open_modal">
-                      Включить
-                    </a>
+              <div class="tabs__content">
+                <div class="row">
+                  <div class="col-100 mb-20">
+                    <div class="zero-box">
+                      <div class="zero-box__icon"><img src="img/folder.svg" alt=""></div>
+                      <p>У вас еще нет выплат</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -727,7 +701,7 @@
 <div class="modal__div" id="detailsInfo">
   <div class="modal__wrapper">
     <div class="modal__div-head">
-      <!--      <h2>Редактировать проект</h2>-->
+<!--      <h2>Редактировать проект</h2>-->
       <div class="modal__close">
         <svg class="svg-icon">
           <use xlink:href="img/sprite.svg#close"></use>
@@ -735,39 +709,39 @@
       </div>
     </div>
 
-    <div class="modal__div-body">
+      <div class="modal__div-body">
 
-      <ul class="list-payment-details my-ul">
-        <li>
-          <p>ID</p>
-          <span>5418844</span>
-        </li>
-        <li>
-          <p>Сумма</p>
-          <span>8 000 ₽</span>
-        </li>
-        <li>
-          <p>Метод</p>
-          <span>Банковская карта</span>
-        </li>
-        <li>
-          <p>Проект</p>
-          <span>Криптопроект</span>
-        </li>
-        <li>
-          <p>Счет</p>
-          <span>2202 2456 8555 4785</span>
-        </li>
-        <li>
-          <p>Дата</p>
-          <span>03.10.2022</span>
-        </li>
-        <li>
-          <p>Статус</p>
-          <div class="status status-on">Успешно</div>
-        </li>
-      </ul>
-    </div>
+        <ul class="list-payment-details my-ul">
+          <li>
+            <p>ID</p>
+            <span>5418844</span>
+          </li>
+          <li>
+            <p>Сумма</p>
+            <span>8 000 ₽</span>
+          </li>
+          <li>
+            <p>Метод</p>
+            <span>Банковская карта</span>
+          </li>
+          <li>
+            <p>Проект</p>
+            <span>Криптопроект</span>
+          </li>
+          <li>
+            <p>Счет</p>
+            <span>2202 2456 8555 4785</span>
+          </li>
+          <li>
+            <p>Дата</p>
+            <span>03.10.2022</span>
+          </li>
+          <li>
+            <p>Статус</p>
+            <div class="status status-on">Успешно</div>
+          </li>
+        </ul>
+      </div>
 
   </div>
 </div>
@@ -994,6 +968,7 @@
     </form>
   </div>
 </div>
+
 
 <!-- Пoдлoжкa -->
 <div class="overlay"></div>

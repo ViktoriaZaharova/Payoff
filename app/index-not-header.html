@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <title>Payoff</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <meta property="og:image" content="path/to/image.jpg">
-  <link rel="shortcut icon" href="img/favicon/favicon.png" type="image/x-icon">
-
-  <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#000">
-  <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#000">
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
-
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/media.css">
-
-</head>
-
-<body>
-
-<div class="wrapper">
-  <header>
-    <div class="container">
-      <div class="btn-burger"><img src="img/burger.svg" alt=""></div>
-      <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
-
-      <div class="btn-group">
-        <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
-        <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
-
-      </div>
-      <a href="#" class="btn btn-cabinet btn-grey">M</a>
-    </div>
-  </header>
 
   <div class="content">
     <section class="content-wrapper">
@@ -75,7 +32,7 @@
 
             <ul class="menu my-ul">
               <li>
-                <a href="index.html">
+                <a href="index.html" class="active">
                   <span class="menu-icon"><img src="img/home-icon.svg" alt=""></span>
                   <span class="menu-text">Главная</span>
                 </a>
@@ -112,74 +69,255 @@
               </li>
             </ul>
           </div>
-
           <div class="sidebar-footer">
             <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
             <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
           </div>
         </div>
         <div class="content-row">
+          <h1>Главная</h1>
+
           <div class="home-category">
             <div class="title-wrapper">
-              <h1>Настройки аккаунта</h1>
+              <h3>Проекты</h3>
+              <a href="projects.html" class="link">
+                <span class="link-text">Все проекты</span>
+                <span class="link-icon"><svg class="svg-icon"><use
+                    xlink:href="img/sprite.svg#arrow-right"></use></svg></span>
+              </a>
             </div>
 
+            <div class="row">
+              <div class="col-3 mb-20 tariffs-card-col">
+                <a href="project-page.html" class="project-card">
+                  <div class="project-card__name">Криптопроект</div>
+                  <div class="project-card__sum">24 000.00 ₽</div>
+                  <div class="status status-on">Активный</div>
+                </a>
+              </div>
+              <div class="col-3 mb-20 tariffs-card-col">
+                <a href="project-page.html" class="project-card">
+                  <div class="project-card__name">Криптопроект2</div>
+                  <div class="project-card__sum">800.48 ₽</div>
+                  <div class="status status-off">Не активный</div>
+                </a>
+              </div>
+              <div class="col-3 mb-20 tariffs-card-col">
+                <a href="project-page.html" class="project-card">
+                  <div class="project-card__name">Криптопроект2</div>
+                  <div class="project-card__sum">800.48 ₽</div>
+                  <div class="status status-off">Не активный</div>
+                </a>
+              </div>
+              <div class="col-3 mb-20 tariffs-card-col">
+                <a href="project-page.html" class="project-card">
+                  <div class="project-card__name">Длинное длинное название прое...</div>
+                  <div class="project-card__sum">24 000.00 ₽</div>
+                  <div class="status status-on">Активный</div>
+                </a>
+              </div>
+              <div class="col-3 mb-20 tariffs-card-col">
+                <a href="project-page.html" class="project-card">
+                  <div class="project-card__name">Проект 72</div>
+                  <div class="project-card__sum">800.48 ₽</div>
+                  <div class="status status-off">Не активный</div>
+                </a>
+              </div>
+              <div class="col-3 mb-20 tariffs-card-col">
+                <a href="project-page.html" class="project-card">
+                  <div class="project-card__name">Длинное название проекта</div>
+                  <div class="project-card__sum">600.45 ₽</div>
+                  <div class="status status-on">Активный</div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h3>Тарифы</h3>
+            </div>
 
             <div class="row">
               <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/mail.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Email адрес</p><span>example@gmail.com</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#editEmail" class="link-edit link open_modal">
-                      <span class="link-edit__icon"><img src="img/edit.svg" alt=""></span>
-                      <span class="link-edit__text">Редактировать</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/lock.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Пароль</p><span>Изменен 02.02.2022</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#editPassword" class="link-edit link open_modal">
-                      <span class="link-edit__text">Сменить пароль</span>
-                    </a>
+                <div class="tariffs-card">
+                  <div class="tariffs-card__icon bg-grey"><img src="img/card-icon.svg" alt=""></div>
+                  <div class="tariffs-card__body">
+                    <div class="tariffs-card__name">Банковская карта</div>
+                    <div class="tariffs-card__description">
+                      <span>Комиссия 5%.</span>
+                      <span>Минимальная сумма вывода 1000 ₽.</span>
+                      <span>Максимальная 75 000 ₽.</span>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h3>Курс</h3>
+            </div>
 
+            <div class="row">
               <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/key.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>API-ключ</p><span>API-ключ можно выпустить только при включенном 2ФА</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#apiModal" class="btn btn-accent open_modal">
-                      Выпустить
-                    </a>
+                <div class="tariffs-card">
+                  <div class="tariffs-card__icon bg-red"><img src="img/arrow-download.svg" alt=""></div>
+                  <div class="tariffs-card__body">
+                    <div class="tariffs-card__name"><p>USDT</p></div>
+                    <div class="tariffs-card__description">
+                      <div class="sum-wrapper">
+                        <div class="sum">59.63 ₽</div>
+                        <div class="sum-course">−0.04 (0,06 %)</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
 
+          <div class="home-category">
+            <div class="title-wrapper">
+              <h3>Последние выплаты</h3>
+              <a href="#" class="link">
+                <span class="link-text">Все выплаты</span>
+                <span class="link-icon"><svg class="svg-icon"><use
+                    xlink:href="img/sprite.svg#arrow-right"></use></svg></span>
+              </a>
+            </div>
+
+            <div class="row">
               <div class="col-100 mb-20">
-                <div class="settings-box">
-                  <div class="settings-box__icon bg-grey"><img src="img/shield.svg" alt=""></div>
-                  <div class="settings-box__body">
-                    <p>Двухфакторная аутентификация</p><span>Дополнительная защита при входе с использованием генерируемых кодов.</span>
-                  </div>
-                  <div class="settings-box__footer">
-                    <a href="#authenticationModal2" class="btn btn-accent open_modal">
-                      Включить
-                    </a>
-                  </div>
-                </div>
+                <table class="table table-payments">
+                  <thead>
+                  <tr>
+                    <td class="td-id">ID</td>
+                    <td class="td-sum">Сумма</td>
+                    <td class="td-method">Метод</td>
+                    <td class="td-name">Проект</td>
+                    <td class="td-check">Счет</td>
+                    <td class="td-status">Статус</td>
+                    <td class="td-date">Дата</td>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td class="td-id">
+                      <p>5418844</p>
+                    </td>
+                    <td class="td-sum">
+                      <p>8 000 ₽</p>
+                    </td>
+                    <td class="td-method">
+                      <p>Банковская карта</p>
+                    </td>
+                    <td class="td-name">
+                      <p>Криптопроект</p>
+                    </td>
+                    <td class="td-check">
+                      <p>2202 2456 8555 4785</p>
+                    </td>
+                    <td class="td-status">
+                      <div class="status status-on">Успешно</div>
+                    </td>
+                    <td class="td-date">
+                      <p>03.10.2022</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="td-id">
+                      <p>5418844</p>
+                    </td>
+                    <td class="td-sum">
+                      <p>700 ₽</p>
+                    </td>
+                    <td class="td-method">
+                      <p>QIWI</p>
+                    </td>
+                    <td class="td-name">
+                      <p>Криптопроект</p>
+                    </td>
+                    <td class="td-check">
+                      <p>2202 2456 8555 4785</p>
+                    </td>
+                    <td class="td-status">
+                      <div class="status status-on">Успешно</div>
+                    </td>
+                    <td class="td-date">
+                      <p>31.09.2022</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="td-id">
+                      <p>5418844</p>
+                    </td>
+                    <td class="td-sum">
+                      <p>50 ₽</p>
+                    </td>
+                    <td class="td-method">
+                      <p>QIWI</p>
+                    </td>
+                    <td class="td-name">
+                      <p>Длинное назв...</p>
+                    </td>
+                    <td class="td-check">
+                      <p>2202 2456 8555 4785</p>
+                    </td>
+                    <td class="td-status">
+                      <div class="status status-process">В процессе</div>
+                    </td>
+                    <td class="td-date">
+                      <p>24.09.2022</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="td-id">
+                      <p>5418844</p>
+                    </td>
+                    <td class="td-sum">
+                      <p>480 000 ₽</p>
+                    </td>
+                    <td class="td-method">
+                      <p>Банковская карта</p>
+                    </td>
+                    <td class="td-name">
+                      <p>Криптопроект</p>
+                    </td>
+                    <td class="td-check">
+                      <p>2202 2456 8555 4785</p>
+                    </td>
+                    <td class="td-status">
+                      <div class="status status-process">В процессе</div>
+                    </td>
+                    <td class="td-date">
+                      <p>12.08.2022</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="td-id">
+                      <p>5418844</p>
+                    </td>
+                    <td class="td-sum">
+                      <p>4 080 000 ₽</p>
+                    </td>
+                    <td class="td-method">
+                      <p>Банковская карта</p>
+                    </td>
+                    <td class="td-name">
+                      <p>Криптопроект</p>
+                    </td>
+                    <td class="td-check">
+                      <p>2202 2456 8555 4785</p>
+                    </td>
+                    <td class="td-status">
+                      <div class="status status-error">Ошибка</div>
+                    </td>
+                    <td class="td-date">
+                      <p>04.07.2022</p>
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>

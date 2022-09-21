@@ -452,8 +452,31 @@
           justify-content: center; }
 
 /*==========  section settings end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
+/*==========  section zero section ==========*/
+.zero-box {
+  width: 100%;
+  padding: 24px;
+  text-align: center;
+  line-height: 24px;
+  border: 1px solid #EAEAEA;
+    border-radius: 16px; }
+  .zero-box__icon {
+    margin: 0 auto 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #F6F6F6;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px; }
+
+/*==========  section zero section end  ==========*/
 /*==========  section  ==========*/
 /*==========  section end  ==========*/
 /*==========  section  ==========*/

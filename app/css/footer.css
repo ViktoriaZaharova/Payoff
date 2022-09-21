@@ -99,6 +99,73 @@
 
 .modal__div-body {
   width: 100%; }
+  .modal__div-body .btn-group {
+    margin: 32px 0 0; }
+    .modal__div-body .btn-group .btn {
+      margin: 0 0 8px; }
+      .modal__div-body .btn-group .btn:last-child {
+        margin: 0; }
+
+.radio-wrapper {
+  width: 100%;
+  background: #F6F6F6;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding: 6px; }
+
+.radio-project {
+  position: relative;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+  width: 50%;
+  cursor: pointer;
+  text-align: center; }
+  .radio-project input {
+    border: none;
+      border-radius: 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: -1;
+    padding: 0; }
+    .radio-project input:checked {
+      -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+              box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06);
+      background: #fff; }
+      .radio-project input:checked + .radio-project__text {
+        color: #000; }
+  .radio-project__text {
+    color: #646464;
+    padding: 18px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    z-index: 1; }
 
 .btn-submit {
   margin: 32px 0 0;
@@ -209,5 +276,95 @@
 
 .api-code {
   text-align: left; }
+
+.modal__div-v3 {
+  max-width: 629px; }
+
+.panel_heading {
+  width: 100%;
+  margin: 0 0 32px; }
+  .panel_heading ol li {
+    margin: 0 0 24px; }
+    .panel_heading ol li:last-child {
+      margin: 0; }
+  .panel_heading:last-child {
+    margin: 0; }
+  .panel_heading .block_title {
+    cursor: pointer;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 0 8px; }
+    .panel_heading .block_title h3 {
+      font-weight: 500;
+      font-size: 16px; }
+    .panel_heading .block_title:after {
+      content: '';
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      background: url("../img/arrow-select.svg") no-repeat center;
+        background-size: 100%;
+      margin: 0 0 0 14px;
+      width: 12px;
+      height: 7px;
+      min-width: 12px; }
+  .panel_heading.in .block_title:after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.block_hover {
+  display: none;
+  font-size: 14px;
+  line-height: 22px; }
+
+.copy-file {
+  width: 100%;
+  background: #F6F6F6;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px;
+  margin: 12px 0 0; }
+
+.btn-download {
+  background: #fff;
+  border: 1px solid #E2E2E2;
+    border-radius: 12px;
+  padding: 9px 16px;
+  color: #000; }
+  .btn-download__icon {
+    margin: 0 10px 0 0;
+    width: 20px;
+    height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.link-web br {
+  display: none; }
 
 /*==========  section modal end  ==========*/

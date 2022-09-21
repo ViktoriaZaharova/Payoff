@@ -72,63 +72,60 @@
   box-sizing: border-box
   position: relative
 
-//.footer-list
-//  display: flex
-//  align-items: center
-//  flex-wrap: wrap
-//  li
-//    margin: 0 32px 0 0
-//    &:last-child
-//      margin: 0
 
 .modal__div-body
   width: 100%
+  .btn-group
+    margin: 32px 0 0
+    .btn
+      margin: 0 0 8px
+      &:last-child
+        margin: 0
 
-//.info-finance-line
-//  width: 100%
-//  display: flex
-//  align-items: flex-start
-//  flex-wrap: wrap
-//  margin: 0 0 24px
-//  &:last-child
-//    margin: 0
-//
-//.info-finance-line__item
-//  color: #fff
-//  font-size: 16px
-//  width: 100%
-//  &.w-50
-//    width: 50%
-//  span
-//    color: #9D9D9D
-//    margin: 0 0 8px
-//    display: block
-//    font-size: 14px
+.radio-wrapper
+  width: 100%
+  background: #F6F6F6
+  border-radius: 16px
+  display: flex
+  align-items: stretch
+  padding: 6px
 
-//.label-file
-//  position: relative
-//  display: flex
-//  align-items: center
-//  width: fit-content
-//  font-size: 14px
-//  font-weight: 500
-//  color: #fff
-//  cursor: pointer
-//  border: 1px solid #FFFFFF
-//    radius: 30px
-//  padding: 15px 16px
-//  &__icon
-//    fill: none
-//    stroke: #fff
-//    width: 16px
-//    height: 16px
-//    min-width: 16px
-//    @include d-flex
-//    margin: 0 8px 0 0
-//
-//
-//.input-file
-//  display: none
+.radio-project
+  position: relative
+  font-weight: 500
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 1
+  width: 50%
+  cursor: pointer
+  text-align: center
+  input
+    border: none
+      radius: 12px
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    margin: 0
+    z-index: -1
+    padding: 0
+    &:checked
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.06)
+      background: #fff
+      + .radio-project__text
+        color: #000
+  &__text
+    color: #646464
+    padding: 18px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    z-index: 1
+
 
 .btn-submit
   margin: 32px 0 0
@@ -212,4 +209,72 @@
 
 .api-code
   text-align: left
+
+.modal__div-v3
+  max-width: 629px
+
+.panel_heading
+  width: 100%
+  margin: 0 0 32px
+  ol
+    li
+      margin: 0 0 24px
+      &:last-child
+        margin: 0
+  &:last-child
+    margin: 0
+
+  .block_title
+    cursor: pointer
+    width: 100%
+    display: flex
+    align-items: center
+    margin: 0 0 8px
+    h3
+      font-weight: 500
+      font-size: 16px
+    &:after
+      content: ''
+      @include d-flex
+      background: url("../img/arrow-select.svg") no-repeat center
+        size: 100%
+      margin: 0 0 0 14px
+      width: 12px
+      height: 7px
+      min-width: 12px
+  &.in
+    .block_title
+      &:after
+        transform: rotate(180deg)
+
+.block_hover
+  display: none
+  font-size: 14px
+  line-height: 22px
+
+.copy-file
+  width: 100%
+  background: #F6F6F6
+  border-radius: 8px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 24px
+  margin: 12px 0 0
+
+.btn-download
+  background: #fff
+  border: 1px solid #E2E2E2
+    radius: 12px
+  padding: 9px 16px
+  color: #000
+  &__icon
+    margin: 0 10px 0 0
+    width: 20px
+    height: 20px
+    @include d-flex
+
+.link-web
+  br
+    display: none
 /*==========  section modal end  ==========*/
