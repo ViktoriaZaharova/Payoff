@@ -38,20 +38,25 @@
 
 .tooltip-wrapper {
   position: relative;
-  margin: 0 0 0 4px; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .tooltip-wrapper:hover .tooltip-box {
     opacity: 1;
     visibility: visible; }
   .tooltip-wrapper:hover .btn-tooltip {
-    background: url("../img/question-icon-accent.svg") no-repeat center;
-      background-size: 100%; }
-    .tooltip-wrapper:hover .btn-tooltip img {
-      display: none; }
+    stroke: #142893; }
 
 .btn-tooltip {
-  width: 16px;
-  height: 16px;
-  min-width: 16px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +66,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer; }
+  cursor: pointer;
+  fill: none;
+  stroke: #000; }
 
 .tooltip-box {
   position: absolute;
@@ -74,8 +81,8 @@
           transform: translate(0, -50%);
   left: 100%;
   margin: 0 0 0 20px;
-  -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04);
-          box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.04);
   border-radius: 16px;
   white-space: nowrap;
   font-weight: 500;
@@ -95,6 +102,16 @@
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
     position: absolute; }
+
+.tooltip-box-left {
+  left: auto;
+  right: 100%;
+  margin: 0 20px 0 0; }
+  .tooltip-box-left:before {
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+            clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    left: auto;
+    right: -11px; }
 
 .menu {
   font-size: 14px;
@@ -501,25 +518,3 @@
     height: 72px; }
 
 /*==========  section zero section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/
-/*==========  section  ==========*/
-/*==========  section end  ==========*/

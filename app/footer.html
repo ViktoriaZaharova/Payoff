@@ -2,7 +2,7 @@
 <div class="modal__div" id="balanceModal">
   <div class="modal__wrapper">
     <div class="modal__div-head">
-      <h2>Подать объявление</h2>
+      <h2>Пополнить баланс</h2>
       <div class="modal__close">
         <svg class="svg-icon">
           <use xlink:href="img/sprite.svg#close"></use>
@@ -11,12 +11,27 @@
     </div>
 
     <div class="modal__div-body">
-      <div class="modal-title__mobile">Подать объявление</div>
+      <div class="modal-title__mobile">Пополнить баланс</div>
 
-      <div class="description-attention">
-        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
-        <div class="description-attention__text">
-          <p>Минимальная сумма пополнения 15 USDT</p>
+      <div class="form-row">
+        <div class="input-title">
+          <p>Проект</p>
+        </div>
+        <div class="dropdown dropdown-select">
+          <div class="dropdown-toggle">Выбрать проект...
+            <div class="dropdown-toggle__icon"></div>
+          </div>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-menu__link">
+              <span class="dropdown-menu__link-text">QIWI</span>
+            </a>
+            <a href="#" class="dropdown-menu__link">
+              <span class="dropdown-menu__link-text">YooMoney</span>
+            </a>
+            <a href="#" class="dropdown-menu__link">
+              <span class="dropdown-menu__link-text">Банковская карта</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -38,7 +53,19 @@
         </div>
       </div>
 
-      <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">Пополнить баланс</a>
+      <div class="description-attention">
+        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+        <div class="description-attention__text">
+          <p>Минимальная сумма пополнения 15 USDT</p>
+        </div>
+      </div>
+
+      <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">
+        <svg class="svg-icon icon-loader-btn">
+          <use xlink:href="img/sprite.svg#loader"></use>
+        </svg>
+        <span>Пополнить баланс</span>
+      </a>
     </div>
 
   </div>

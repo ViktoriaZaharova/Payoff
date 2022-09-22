@@ -28,6 +28,13 @@
 
 <body>
 
+<div class="preloader">
+  <div class="preloader__row">
+    <div class="preloader__item"></div>
+    <div class="preloader__item"></div>
+  </div>
+</div>
+
 <div class="wrapper">
   <header>
     <div class="container">
@@ -65,18 +72,8 @@
           </div>
           <div class="sidebar-body">
             <div class="balance-item">
-              <p>Общий баланс
-                <span class="tooltip-wrapper">
-              <span class="btn-tooltip"><img src="img/question-icon.svg" alt=""></span>
-              <span class="tooltip-box">Баланс проектов + Аккаунт</span>
-            </span>
-              </p>
-              <div class="balance-item__val">4 000.00 ₽</div>
-            </div>
-
-            <div class="balance-item">
-              <p>Баланс аккаунта</p>
-              <div class="balance-item__val">40 000 000.00 ₽ <a href="#addBalance" class="btn-reverse open_modal"><img
+              <p>Общий баланс</p>
+              <div class="balance-item__val">4 000.00 ₽ <a href="#addBalance" class="btn-reverse open_modal"><img
                   src="img/reverse-icon.svg"
                   alt=""></a></div>
             </div>
@@ -249,6 +246,12 @@
                     <td class="td-check">Счет</td>
                     <td class="td-status">Статус</td>
                     <td class="td-date">Дата</td>
+                    <td class="td-icon">
+
+                    </td>
+                    <td class="td-icon">
+
+                    </td>
                   </tr>
                   </thead>
                   <tbody>
@@ -274,6 +277,21 @@
                     <td class="td-date">
                       <p>03.10.2022</p>
                     </td>
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                      </a>
+                    </td>
+
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#loader"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Детали платежа</span>
+                      </a>
+                    </td>
                   </tr>
                   <tr>
                     <td class="td-id">
@@ -296,6 +314,21 @@
                     </td>
                     <td class="td-date">
                       <p>31.09.2022</p>
+                    </td>
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                      </a>
+                    </td>
+
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#loader"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Детали платежа</span>
+                      </a>
                     </td>
                   </tr>
                   <tr>
@@ -320,6 +353,16 @@
                     <td class="td-date">
                       <p>24.09.2022</p>
                     </td>
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                      </a>
+                    </td>
+
+                    <td class="td-icon">
+                    </td>
                   </tr>
                   <tr>
                     <td class="td-id">
@@ -342,6 +385,16 @@
                     </td>
                     <td class="td-date">
                       <p>12.08.2022</p>
+                    </td>
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                      </a>
+                    </td>
+
+                    <td class="td-icon">
                     </td>
                   </tr>
                   <tr>
@@ -366,6 +419,16 @@
                     <td class="td-date">
                       <p>04.07.2022</p>
                     </td>
+                    <td class="td-icon">
+                      <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                        <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                      </a>
+                    </td>
+
+                    <td class="td-icon">
+                    </td>
                   </tr>
                   </tbody>
                 </table>
@@ -382,7 +445,7 @@
 <div class="modal__div" id="balanceModal">
   <div class="modal__wrapper">
     <div class="modal__div-head">
-      <h2>Подать объявление</h2>
+      <h2>Пополнить баланс</h2>
       <div class="modal__close">
         <svg class="svg-icon">
           <use xlink:href="img/sprite.svg#close"></use>
@@ -391,12 +454,27 @@
     </div>
 
     <div class="modal__div-body">
-      <div class="modal-title__mobile">Подать объявление</div>
+      <div class="modal-title__mobile">Пополнить баланс</div>
 
-      <div class="description-attention">
-        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
-        <div class="description-attention__text">
-          <p>Минимальная сумма пополнения 15 USDT</p>
+      <div class="form-row">
+        <div class="input-title">
+          <p>Проект</p>
+        </div>
+        <div class="dropdown dropdown-select">
+          <div class="dropdown-toggle">Выбрать проект...
+            <div class="dropdown-toggle__icon"></div>
+          </div>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-menu__link">
+              <span class="dropdown-menu__link-text">QIWI</span>
+            </a>
+            <a href="#" class="dropdown-menu__link">
+              <span class="dropdown-menu__link-text">YooMoney</span>
+            </a>
+            <a href="#" class="dropdown-menu__link">
+              <span class="dropdown-menu__link-text">Банковская карта</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -418,7 +496,94 @@
         </div>
       </div>
 
-      <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">Пополнить баланс</a>
+      <div class="description-attention">
+        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+        <div class="description-attention__text">
+          <p>Минимальная сумма пополнения 15 USDT</p>
+        </div>
+      </div>
+
+      <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">
+        <svg class="svg-icon icon-loader-btn">
+          <use xlink:href="img/sprite.svg#loader"></use>
+        </svg>
+        <span>Пополнить баланс</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal__div modal__div-v3" id="infoModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Информация транзакции 70364091</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">Информация транзакции 70364091</div>
+
+      <div class="info-item">
+        <div class="info-item__title">Код ответа</div>
+        <div class="info-item__content">
+          <div class="box-text">
+            <p>200</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-item__title">Отправленные данные на ваш сервер</div>
+        <div class="info-item__content">
+          <div class="box-text">
+            <ul class="my-ul">
+              <li>HTTP 1.1</li>
+              <li>Server: Cowboy</li>
+              <li>Connection: keep-alive</li>
+              <li>Vary: Origin</li>
+              <li>Date: Wed, 21 Sep 2022 20:54:19 GMT</li>
+              <li>Content-Length: 0</li>
+              <li>Content-Type: text/plain; charset=utf-8</li>
+              <li>Via: 1.1 vegur</li>
+            </ul>
+            <p>status=1&transaction_id=p632b755803455&service=qw&wallet=%2B791739<br>69455&sum=25.00&fee=0.50&total_sum=25.50&subtract_fee_from_amoun<br>t=0</p>
+
+            <p>405 Method Not Allowed</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <div class="info-item__title">Ответ от вашего сервера</div>
+        <div class="info-item__content">
+         <div class="box-text">
+           <ul class="my-ul">
+             <li>HTTP 1.1</li>
+             <li>Server: Cowboy</li>
+             <li>Connection: keep-alive</li>
+             <li>Vary: Origin</li>
+             <li>Date: Wed, 21 Sep 2022 20:54:19 GMT</li>
+             <li>Content-Length: 0</li>
+             <li>Content-Type: text/plain; charset=utf-8</li>
+             <li>Via: 1.1 vegur</li>
+           </ul>
+           <p>status=1&transaction_id=p632b755803455&service=qw&wallet=%2B791739<br>69455&sum=25.00&fee=0.50&total_sum=25.50&subtract_fee_from_amoun<br>t=0</p>
+
+           <p>405 Method Not Allowed</p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid at, consectetur deserunt distinctio
+             doloribus earum est ex labore maiores molestiae mollitia obcaecati odio quo quos reprehenderit suscipit?
+             Animi, harum.</p>
+         </div>
+
+          <a href="#" class="btn btn-white btn-view-text">Открыть полный ответ</a>
+        </div>
+
+      </div>
     </div>
 
   </div>
@@ -1082,7 +1247,8 @@
         <div class="qr-code api-code">
           033KIE8888ENNC99033KIE8888ENNC99033KIE888<br>8ENNC99033KIE8888ENNC99033KIE8888ENNC990<br>33KIE8888ENNC99033KIE8888ENNC99033KI8EN
         </div>
-        <div class="qr-code qr-code-mobile api-code">033KIE8888ENNC99033KIE8888<br>ENNC99033KIE8888ENNC99033<br>KIE8888ENNC99033KIE8888ENN<br>C99033KIE8888ENNC99033KIE8<br>888ENNC99033KI8EN</div>
+        <div class="qr-code qr-code-mobile api-code">033KIE8888ENNC99033KIE8888<br>ENNC99033KIE8888ENNC99033<br>KIE8888ENNC99033KIE8888ENN<br>C99033KIE8888ENNC99033KIE8<br>888ENNC99033KI8EN
+        </div>
       </div>
 
 
@@ -1145,8 +1311,12 @@
           <label>
             <input type="password" value="" class="input-password" name="password" required>
             <a href="#" class="btn-view-password">
-              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
-              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#view"></use>
+              </svg>
+              <svg class="svg-icon svg-icon-hide">
+                <use xlink:href="img/sprite.svg#view-hide"></use>
+              </svg>
             </a>
           </label>
         </div>
@@ -1158,8 +1328,12 @@
           <label>
             <input type="password" value="" class="input-password" name="password" required>
             <a href="#" class="btn-view-password">
-              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
-              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#view"></use>
+              </svg>
+              <svg class="svg-icon svg-icon-hide">
+                <use xlink:href="img/sprite.svg#view-hide"></use>
+              </svg>
             </a>
           </label>
         </div>
@@ -1171,8 +1345,12 @@
           <label>
             <input type="password" value="" class="input-password" name="password" required>
             <a href="#" class="btn-view-password">
-              <svg class="svg-icon"><use xlink:href="img/sprite.svg#view"></use></svg>
-              <svg class="svg-icon svg-icon-hide"><use xlink:href="img/sprite.svg#view-hide"></use></svg>
+              <svg class="svg-icon">
+                <use xlink:href="img/sprite.svg#view"></use>
+              </svg>
+              <svg class="svg-icon svg-icon-hide">
+                <use xlink:href="img/sprite.svg#view-hide"></use>
+              </svg>
             </a>
           </label>
         </div>

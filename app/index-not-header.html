@@ -1,329 +1,385 @@
 
 
-  <div class="content">
-    <section class="content-wrapper">
-      <div class="container">
-        <div class="sidebar">
-          <div class="sidebar-head">
-            <div class="btn-close-sidebar">
-              <svg class="svg-icon">
-                <use xlink:href="img/sprite.svg#close"></use>
-              </svg>
-            </div>
-            <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+<div class="content">
+  <section class="content-wrapper">
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar-head">
+          <div class="btn-close-sidebar">
+            <svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
           </div>
-          <div class="sidebar-body">
-            <div class="balance-item">
-              <p>Общий баланс
-                <span class="tooltip-wrapper">
-              <span class="btn-tooltip"><img src="img/question-icon.svg" alt=""></span>
-              <span class="tooltip-box">Баланс проектов + Аккаунт</span>
-            </span>
-              </p>
-              <div class="balance-item__val">4 000.00 ₽</div>
-            </div>
-
-            <div class="balance-item">
-              <p>Баланс аккаунта</p>
-              <div class="balance-item__val">40 000 000.00 ₽ <a href="#addBalance" class="btn-reverse open_modal"><img
-                  src="img/reverse-icon.svg"
-                  alt=""></a></div>
-            </div>
-
-            <ul class="menu my-ul">
-              <li>
-                <a href="index.html" class="active">
-                  <span class="menu-icon"><img src="img/home-icon.svg" alt=""></span>
-                  <span class="menu-text">Главная</span>
-                </a>
-              </li>
-              <li>
-                <a href="projects.html">
-                  <span class="menu-icon"><img src="img/project-icon.svg" alt=""></span>
-                  <span class="menu-text">Проекты</span>
-                </a>
-              </li>
-              <li>
-                <a href="history.html">
-                  <span class="menu-icon"><img src="img/file-icon.svg" alt=""></span>
-                  <span class="menu-text">История выплат</span>
-                </a>
-              </li>
-              <li>
-                <a href="settings.html">
-                  <span class="menu-icon"><img src="img/settings-icon.svg" alt=""></span>
-                  <span class="menu-text">Настройка аккаунта</span>
-                </a>
-              </li>
-              <li>
-                <a href="developer.html">
-                  <span class="menu-icon"><img src="img/terminal.svg" alt=""></span>
-                  <span class="menu-text">Для разработчиков</span>
-                </a>
-              </li>
-              <li>
-                <a href="help.html">
-                  <span class="menu-icon"><img src="img/help-icon.svg" alt=""></span>
-                  <span class="menu-text">Служба поддержки</span>
-                </a>
-              </li>
-            </ul>
+          <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+        </div>
+        <div class="sidebar-body">
+          <div class="balance-item">
+            <p>Общий баланс</p>
+            <div class="balance-item__val">4 000.00 ₽ <a href="#addBalance" class="btn-reverse open_modal"><img
+                src="img/reverse-icon.svg"
+                alt=""></a></div>
           </div>
-          <div class="sidebar-footer">
-            <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
-            <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+
+          <ul class="menu my-ul">
+            <li>
+              <a href="index.html" class="active">
+                <span class="menu-icon"><img src="img/home-icon.svg" alt=""></span>
+                <span class="menu-text">Главная</span>
+              </a>
+            </li>
+            <li>
+              <a href="projects.html">
+                <span class="menu-icon"><img src="img/project-icon.svg" alt=""></span>
+                <span class="menu-text">Проекты</span>
+              </a>
+            </li>
+            <li>
+              <a href="history.html">
+                <span class="menu-icon"><img src="img/file-icon.svg" alt=""></span>
+                <span class="menu-text">История выплат</span>
+              </a>
+            </li>
+            <li>
+              <a href="settings.html">
+                <span class="menu-icon"><img src="img/settings-icon.svg" alt=""></span>
+                <span class="menu-text">Настройка аккаунта</span>
+              </a>
+            </li>
+            <li>
+              <a href="developer.html">
+                <span class="menu-icon"><img src="img/terminal.svg" alt=""></span>
+                <span class="menu-text">Для разработчиков</span>
+              </a>
+            </li>
+            <li>
+              <a href="help.html">
+                <span class="menu-icon"><img src="img/help-icon.svg" alt=""></span>
+                <span class="menu-text">Служба поддержки</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-footer">
+          <a href="#payModal" class="btn btn-grey open_modal">Создать выплату</a>
+          <a href="#balanceModal" class="btn btn-accent open_modal">Пополнить баланс</a>
+        </div>
+      </div>
+      <div class="content-row">
+        <h1>Главная</h1>
+
+        <div class="home-category">
+          <div class="title-wrapper">
+            <h3>Проекты</h3>
+            <a href="projects.html" class="link">
+              <span class="link-text">Все проекты</span>
+              <span class="link-icon"><svg class="svg-icon"><use
+                  xlink:href="img/sprite.svg#arrow-right"></use></svg></span>
+            </a>
+          </div>
+
+          <div class="row">
+            <div class="col-3 mb-20 tariffs-card-col">
+              <a href="project-page.html" class="project-card">
+                <div class="project-card__name">Криптопроект</div>
+                <div class="project-card__sum">24 000.00 ₽</div>
+                <div class="status status-on">Активный</div>
+              </a>
+            </div>
+            <div class="col-3 mb-20 tariffs-card-col">
+              <a href="project-page.html" class="project-card">
+                <div class="project-card__name">Криптопроект2</div>
+                <div class="project-card__sum">800.48 ₽</div>
+                <div class="status status-off">Не активный</div>
+              </a>
+            </div>
+            <div class="col-3 mb-20 tariffs-card-col">
+              <a href="project-page.html" class="project-card">
+                <div class="project-card__name">Криптопроект2</div>
+                <div class="project-card__sum">800.48 ₽</div>
+                <div class="status status-off">Не активный</div>
+              </a>
+            </div>
+            <div class="col-3 mb-20 tariffs-card-col">
+              <a href="project-page.html" class="project-card">
+                <div class="project-card__name">Длинное длинное название прое...</div>
+                <div class="project-card__sum">24 000.00 ₽</div>
+                <div class="status status-on">Активный</div>
+              </a>
+            </div>
+            <div class="col-3 mb-20 tariffs-card-col">
+              <a href="project-page.html" class="project-card">
+                <div class="project-card__name">Проект 72</div>
+                <div class="project-card__sum">800.48 ₽</div>
+                <div class="status status-off">Не активный</div>
+              </a>
+            </div>
+            <div class="col-3 mb-20 tariffs-card-col">
+              <a href="project-page.html" class="project-card">
+                <div class="project-card__name">Длинное название проекта</div>
+                <div class="project-card__sum">600.45 ₽</div>
+                <div class="status status-on">Активный</div>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="content-row">
-          <h1>Главная</h1>
+        <div class="home-category">
+          <div class="title-wrapper">
+            <h3>Тарифы</h3>
+          </div>
 
-          <div class="home-category">
-            <div class="title-wrapper">
-              <h3>Проекты</h3>
-              <a href="projects.html" class="link">
-                <span class="link-text">Все проекты</span>
-                <span class="link-icon"><svg class="svg-icon"><use
-                    xlink:href="img/sprite.svg#arrow-right"></use></svg></span>
-              </a>
-            </div>
-
-            <div class="row">
-              <div class="col-3 mb-20 tariffs-card-col">
-                <a href="project-page.html" class="project-card">
-                  <div class="project-card__name">Криптопроект</div>
-                  <div class="project-card__sum">24 000.00 ₽</div>
-                  <div class="status status-on">Активный</div>
-                </a>
-              </div>
-              <div class="col-3 mb-20 tariffs-card-col">
-                <a href="project-page.html" class="project-card">
-                  <div class="project-card__name">Криптопроект2</div>
-                  <div class="project-card__sum">800.48 ₽</div>
-                  <div class="status status-off">Не активный</div>
-                </a>
-              </div>
-              <div class="col-3 mb-20 tariffs-card-col">
-                <a href="project-page.html" class="project-card">
-                  <div class="project-card__name">Криптопроект2</div>
-                  <div class="project-card__sum">800.48 ₽</div>
-                  <div class="status status-off">Не активный</div>
-                </a>
-              </div>
-              <div class="col-3 mb-20 tariffs-card-col">
-                <a href="project-page.html" class="project-card">
-                  <div class="project-card__name">Длинное длинное название прое...</div>
-                  <div class="project-card__sum">24 000.00 ₽</div>
-                  <div class="status status-on">Активный</div>
-                </a>
-              </div>
-              <div class="col-3 mb-20 tariffs-card-col">
-                <a href="project-page.html" class="project-card">
-                  <div class="project-card__name">Проект 72</div>
-                  <div class="project-card__sum">800.48 ₽</div>
-                  <div class="status status-off">Не активный</div>
-                </a>
-              </div>
-              <div class="col-3 mb-20 tariffs-card-col">
-                <a href="project-page.html" class="project-card">
-                  <div class="project-card__name">Длинное название проекта</div>
-                  <div class="project-card__sum">600.45 ₽</div>
-                  <div class="status status-on">Активный</div>
-                </a>
+          <div class="row">
+            <div class="col-100 mb-20">
+              <div class="tariffs-card">
+                <div class="tariffs-card__icon bg-grey"><img src="img/card-icon.svg" alt=""></div>
+                <div class="tariffs-card__body">
+                  <div class="tariffs-card__name">Банковская карта</div>
+                  <div class="tariffs-card__description">
+                    <span>Комиссия 5%.</span>
+                    <span>Минимальная сумма вывода 1000 ₽.</span>
+                    <span>Максимальная 75 000 ₽.</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="home-category">
-            <div class="title-wrapper">
-              <h3>Тарифы</h3>
-            </div>
+        </div>
+        <div class="home-category">
+          <div class="title-wrapper">
+            <h3>Курс</h3>
+          </div>
 
-            <div class="row">
-              <div class="col-100 mb-20">
-                <div class="tariffs-card">
-                  <div class="tariffs-card__icon bg-grey"><img src="img/card-icon.svg" alt=""></div>
-                  <div class="tariffs-card__body">
-                    <div class="tariffs-card__name">Банковская карта</div>
-                    <div class="tariffs-card__description">
-                      <span>Комиссия 5%.</span>
-                      <span>Минимальная сумма вывода 1000 ₽.</span>
-                      <span>Максимальная 75 000 ₽.</span>
+          <div class="row">
+            <div class="col-100 mb-20">
+              <div class="tariffs-card">
+                <div class="tariffs-card__icon bg-red"><img src="img/arrow-download.svg" alt=""></div>
+                <div class="tariffs-card__body">
+                  <div class="tariffs-card__name"><p>USDT</p></div>
+                  <div class="tariffs-card__description">
+                    <div class="sum-wrapper">
+                      <div class="sum">59.63 ₽</div>
+                      <div class="sum-course">−0.04 (0,06 %)</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="home-category">
-            <div class="title-wrapper">
-              <h3>Курс</h3>
-            </div>
+        </div>
 
-            <div class="row">
-              <div class="col-100 mb-20">
-                <div class="tariffs-card">
-                  <div class="tariffs-card__icon bg-red"><img src="img/arrow-download.svg" alt=""></div>
-                  <div class="tariffs-card__body">
-                    <div class="tariffs-card__name"><p>USDT</p></div>
-                    <div class="tariffs-card__description">
-                      <div class="sum-wrapper">
-                        <div class="sum">59.63 ₽</div>
-                        <div class="sum-course">−0.04 (0,06 %)</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="home-category">
+          <div class="title-wrapper">
+            <h3>Последние выплаты</h3>
+            <a href="#" class="link">
+              <span class="link-text">Все выплаты</span>
+              <span class="link-icon"><svg class="svg-icon"><use
+                  xlink:href="img/sprite.svg#arrow-right"></use></svg></span>
+            </a>
           </div>
 
-          <div class="home-category">
-            <div class="title-wrapper">
-              <h3>Последние выплаты</h3>
-              <a href="#" class="link">
-                <span class="link-text">Все выплаты</span>
-                <span class="link-icon"><svg class="svg-icon"><use
-                    xlink:href="img/sprite.svg#arrow-right"></use></svg></span>
-              </a>
-            </div>
+          <div class="row">
+            <div class="col-100 mb-20">
+              <table class="table table-payments">
+                <thead>
+                <tr>
+                  <td class="td-id">ID</td>
+                  <td class="td-sum">Сумма</td>
+                  <td class="td-method">Метод</td>
+                  <td class="td-name">Проект</td>
+                  <td class="td-check">Счет</td>
+                  <td class="td-status">Статус</td>
+                  <td class="td-date">Дата</td>
+                  <td class="td-icon">
 
-            <div class="row">
-              <div class="col-100 mb-20">
-                <table class="table table-payments">
-                  <thead>
-                  <tr>
-                    <td class="td-id">ID</td>
-                    <td class="td-sum">Сумма</td>
-                    <td class="td-method">Метод</td>
-                    <td class="td-name">Проект</td>
-                    <td class="td-check">Счет</td>
-                    <td class="td-status">Статус</td>
-                    <td class="td-date">Дата</td>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td class="td-id">
-                      <p>5418844</p>
-                    </td>
-                    <td class="td-sum">
-                      <p>8 000 ₽</p>
-                    </td>
-                    <td class="td-method">
-                      <p>Банковская карта</p>
-                    </td>
-                    <td class="td-name">
-                      <p>Криптопроект</p>
-                    </td>
-                    <td class="td-check">
-                      <p>2202 2456 8555 4785</p>
-                    </td>
-                    <td class="td-status">
-                      <div class="status status-on">Успешно</div>
-                    </td>
-                    <td class="td-date">
-                      <p>03.10.2022</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="td-id">
-                      <p>5418844</p>
-                    </td>
-                    <td class="td-sum">
-                      <p>700 ₽</p>
-                    </td>
-                    <td class="td-method">
-                      <p>QIWI</p>
-                    </td>
-                    <td class="td-name">
-                      <p>Криптопроект</p>
-                    </td>
-                    <td class="td-check">
-                      <p>2202 2456 8555 4785</p>
-                    </td>
-                    <td class="td-status">
-                      <div class="status status-on">Успешно</div>
-                    </td>
-                    <td class="td-date">
-                      <p>31.09.2022</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="td-id">
-                      <p>5418844</p>
-                    </td>
-                    <td class="td-sum">
-                      <p>50 ₽</p>
-                    </td>
-                    <td class="td-method">
-                      <p>QIWI</p>
-                    </td>
-                    <td class="td-name">
-                      <p>Длинное назв...</p>
-                    </td>
-                    <td class="td-check">
-                      <p>2202 2456 8555 4785</p>
-                    </td>
-                    <td class="td-status">
-                      <div class="status status-process">В процессе</div>
-                    </td>
-                    <td class="td-date">
-                      <p>24.09.2022</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="td-id">
-                      <p>5418844</p>
-                    </td>
-                    <td class="td-sum">
-                      <p>480 000 ₽</p>
-                    </td>
-                    <td class="td-method">
-                      <p>Банковская карта</p>
-                    </td>
-                    <td class="td-name">
-                      <p>Криптопроект</p>
-                    </td>
-                    <td class="td-check">
-                      <p>2202 2456 8555 4785</p>
-                    </td>
-                    <td class="td-status">
-                      <div class="status status-process">В процессе</div>
-                    </td>
-                    <td class="td-date">
-                      <p>12.08.2022</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="td-id">
-                      <p>5418844</p>
-                    </td>
-                    <td class="td-sum">
-                      <p>4 080 000 ₽</p>
-                    </td>
-                    <td class="td-method">
-                      <p>Банковская карта</p>
-                    </td>
-                    <td class="td-name">
-                      <p>Криптопроект</p>
-                    </td>
-                    <td class="td-check">
-                      <p>2202 2456 8555 4785</p>
-                    </td>
-                    <td class="td-status">
-                      <div class="status status-error">Ошибка</div>
-                    </td>
-                    <td class="td-date">
-                      <p>04.07.2022</p>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
+                  </td>
+                  <td class="td-icon">
+
+                  </td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td class="td-id">
+                    <p>5418844</p>
+                  </td>
+                  <td class="td-sum">
+                    <p>8 000 ₽</p>
+                  </td>
+                  <td class="td-method">
+                    <p>Банковская карта</p>
+                  </td>
+                  <td class="td-name">
+                    <p>Криптопроект</p>
+                  </td>
+                  <td class="td-check">
+                    <p>2202 2456 8555 4785</p>
+                  </td>
+                  <td class="td-status">
+                    <div class="status status-on">Успешно</div>
+                  </td>
+                  <td class="td-date">
+                    <p>03.10.2022</p>
+                  </td>
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                    </a>
+                  </td>
+
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#loader"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Детали платежа</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-id">
+                    <p>5418844</p>
+                  </td>
+                  <td class="td-sum">
+                    <p>700 ₽</p>
+                  </td>
+                  <td class="td-method">
+                    <p>QIWI</p>
+                  </td>
+                  <td class="td-name">
+                    <p>Криптопроект</p>
+                  </td>
+                  <td class="td-check">
+                    <p>2202 2456 8555 4785</p>
+                  </td>
+                  <td class="td-status">
+                    <div class="status status-on">Успешно</div>
+                  </td>
+                  <td class="td-date">
+                    <p>31.09.2022</p>
+                  </td>
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                    </a>
+                  </td>
+
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#loader"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Детали платежа</span>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-id">
+                    <p>5418844</p>
+                  </td>
+                  <td class="td-sum">
+                    <p>50 ₽</p>
+                  </td>
+                  <td class="td-method">
+                    <p>QIWI</p>
+                  </td>
+                  <td class="td-name">
+                    <p>Длинное назв...</p>
+                  </td>
+                  <td class="td-check">
+                    <p>2202 2456 8555 4785</p>
+                  </td>
+                  <td class="td-status">
+                    <div class="status status-process">В процессе</div>
+                  </td>
+                  <td class="td-date">
+                    <p>24.09.2022</p>
+                  </td>
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                    </a>
+                  </td>
+
+                  <td class="td-icon">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-id">
+                    <p>5418844</p>
+                  </td>
+                  <td class="td-sum">
+                    <p>480 000 ₽</p>
+                  </td>
+                  <td class="td-method">
+                    <p>Банковская карта</p>
+                  </td>
+                  <td class="td-name">
+                    <p>Криптопроект</p>
+                  </td>
+                  <td class="td-check">
+                    <p>2202 2456 8555 4785</p>
+                  </td>
+                  <td class="td-status">
+                    <div class="status status-process">В процессе</div>
+                  </td>
+                  <td class="td-date">
+                    <p>12.08.2022</p>
+                  </td>
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                    </a>
+                  </td>
+
+                  <td class="td-icon">
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-id">
+                    <p>5418844</p>
+                  </td>
+                  <td class="td-sum">
+                    <p>4 080 000 ₽</p>
+                  </td>
+                  <td class="td-method">
+                    <p>Банковская карта</p>
+                  </td>
+                  <td class="td-name">
+                    <p>Криптопроект</p>
+                  </td>
+                  <td class="td-check">
+                    <p>2202 2456 8555 4785</p>
+                  </td>
+                  <td class="td-status">
+                    <div class="status status-error">Ошибка</div>
+                  </td>
+                  <td class="td-date">
+                    <p>04.07.2022</p>
+                  </td>
+                  <td class="td-icon">
+                    <a href="#infoModal" class="tooltip-wrapper open_modal">
+                        <span class="btn-tooltip"><svg class="svg-icon"><use
+                            xlink:href="img/sprite.svg#info"></use></svg></span>
+                      <span class="tooltip-box tooltip-box-left">Отправить Webhook повторно</span>
+                    </a>
+                  </td>
+
+                  <td class="td-icon">
+                  </td>
+                </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+</div>
 
 </div>

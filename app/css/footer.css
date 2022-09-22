@@ -59,6 +59,12 @@
   .modal__div-body {
     width: 100%;
     padding: 0 32px 32px; }
+    .modal__div-body .btn-group {
+      margin: 32px 0 0; }
+      .modal__div-body .btn-group .btn {
+        margin: 0 0 8px; }
+        .modal__div-body .btn-group .btn:last-child {
+          margin: 0; }
   .modal__div-footer {
     width: 100%;
     padding: 32px;
@@ -92,19 +98,10 @@
   width: 100%;
   height: auto;
   overflow: auto;
-  margin: 50px auto;
+  margin: 10px auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative; }
-
-.modal__div-body {
-  width: 100%; }
-  .modal__div-body .btn-group {
-    margin: 32px 0 0; }
-    .modal__div-body .btn-group .btn {
-      margin: 0 0 8px; }
-      .modal__div-body .btn-group .btn:last-child {
-        margin: 0; }
 
 .radio-wrapper {
   width: 100%;
@@ -169,7 +166,37 @@
 
 .btn-submit {
   margin: 32px 0 0;
-  width: 100%; }
+  width: 100%;
+  min-height: 56px; }
+  .btn-submit span {
+    display: none; }
+
+.icon-loader-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  stroke: #fff;
+  fill: none;
+  width: 20px;
+  height: 20px;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite; }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
 
 .description-attention {
   width: 100%;
@@ -204,7 +231,11 @@
       margin: 0; }
 
 .add-balance {
-  text-align: center; }
+  text-align: center;
+  background: #F6F6F6;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0 auto 24px; }
   .add-balance p {
     font-weight: 500; }
 
@@ -223,8 +254,8 @@
   width: 100%; }
 
 .qr-code {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   margin: 0 auto 24px; }
 
 .course-currency {
@@ -240,12 +271,17 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-weight: 500;
-  font-size: 16px; }
-  .course-currency p:after {
-    content: '·';
-    margin: 0 4px;
-    display: inline-block; }
+  font-size: 14px;
+  font-weight: normal; }
+  .course-currency p {
+    font-weight: normal; }
+    .course-currency p:after {
+      content: '·';
+      margin: 0 4px;
+      display: inline-block; }
+  .course-currency .sum-wrapper {
+    font-size: 14px;
+    font-weight: normal; }
 
 .modal-title__mobile {
   width: 100%;
@@ -366,5 +402,35 @@
 
 .link-web br {
   display: none; }
+
+.info-item {
+  width: 100%;
+  margin: 0 0 32px; }
+  .info-item:last-child {
+    margin: 0; }
+  .info-item__title {
+    width: 100%;
+    margin: 0 0 16px;
+    font-weight: 500; }
+  .info-item__content {
+    width: 100%;
+    background: #F6F6F6;
+    border-radius: 8px;
+    padding: 24px; }
+    .info-item__content .box-text {
+      font-size: 14px;
+      line-height: 22px;
+      max-height: 308px;
+      overflow: hidden; }
+      .info-item__content .box-text p {
+        margin: 0 0 30px; }
+        .info-item__content .box-text p:last-child {
+          margin: 0; }
+      .info-item__content .box-text.open {
+        max-height: none;
+        overflow: visible; }
+  .info-item .btn {
+    width: 100%;
+    margin: 20px 0 0; }
 
 /*==========  section modal end  ==========*/

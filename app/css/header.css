@@ -4,8 +4,6 @@ header {
           box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.04);
   background: #ffffff;
   padding: 18px 0; }
-  header .container {
-    max-width: none; }
 
 .logo {
   display: -webkit-box;

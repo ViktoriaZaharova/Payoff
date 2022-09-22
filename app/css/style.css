@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 * {
   -webkit-box-sizing: border-box;
@@ -208,7 +209,8 @@ button, .btn {
   font-size: 14px;
   font-weight: 600;
   border-radius: 12px;
-  line-height: 22px; }
+  line-height: 22px;
+  min-height: 48px; }
 
 .btn-accent {
   color: #fff;
@@ -264,6 +266,13 @@ button, .btn {
   .btn-border:disabled {
     background: #F6F6F6;
     color: #8E8E8E; }
+
+.btn-white {
+  background: #fff;
+  color: #000; }
+  .btn-white:hover {
+    background: #142893;
+    color: #fff; }
 
 .btn-md {
   padding: 17px; }
@@ -496,6 +505,8 @@ table {
   border-radius: 16px;
   font-size: 16px;
   line-height: 24px; }
+  table .tooltip-wrapper {
+    margin: 5px 8px; }
 
 thead {
   text-align: left;
@@ -513,7 +524,8 @@ tr {
   vertical-align: middle; }
 
 td {
-  padding: 12px 0; }
+  padding: 12px 0;
+  vertical-align: middle; }
   td:first-child {
     width: 100px;
     padding: 12px 23px 12px 25px; }
@@ -831,3 +843,77 @@ td {
   right: 0;
   -webkit-transform: none;
           transform: none; }
+
+.preloader {
+  /*фиксированное позиционирование */
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 11; }
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  -webkit-animation: preloader-rotate 2s infinite linear;
+          animation: preloader-rotate 2s infinite linear; }
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #142893;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  -webkit-animation: preloader-bounce 2s infinite ease-in-out;
+          animation: preloader-bounce 2s infinite ease-in-out; }
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1s;
+            animation-delay: -1s; }
+
+@-webkit-keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@-webkit-keyframes preloader-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes preloader-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+.loaded_hiding .preloader {
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0; }
+
+.loaded .preloader {
+  display: none; }

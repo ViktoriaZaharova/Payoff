@@ -56,7 +56,9 @@
       left: 50%;
       top: -7px;
       -webkit-transform: translate(-50%, 0);
-              transform: translate(-50%, 0); } }
+              transform: translate(-50%, 0); }
+  .modal__div {
+    height: 100%; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -110,7 +112,7 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 32px; }
-  .table-payments .td-method, .table-payments .td-check, .table-payments .td-date {
+  .table-payments .td-method, .table-payments .td-check, .table-payments .td-date, .table-payments .td-icon {
     display: none; }
   .table-payments .td-status {
     width: 100%; }
@@ -215,7 +217,9 @@
   .zero-box {
     padding: 16px;
     font-size: 14px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  .info-item__content {
+    padding: 20px 24px; } }
 
 @media only screen and (max-width: 480px) {
   .form-search {
