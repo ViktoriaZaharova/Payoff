@@ -78,6 +78,26 @@
                   alt=""></a></div>
             </div>
 
+            <div class="exchange-rate">
+              <p>USDT · 59.63 ₽</p>
+              <div class="exchange-rate__val color-green">+0.58</div>
+              <div class="exchange-rate__icon color-green">
+                <svg class="svg-icon">
+                  <use xlink:href="img/sprite.svg#arrow-top"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="exchange-rate">
+              <p>USDT · 59.63 ₽</p>
+              <div class="exchange-rate__val color-red">−0.04</div>
+              <div class="exchange-rate__icon color-red">
+                <svg class="svg-icon">
+                  <use xlink:href="img/sprite.svg#arrow-bottom"></use>
+                </svg>
+              </div>
+            </div>
+
             <ul class="menu my-ul">
               <li>
                 <a href="index.html" class="active">
@@ -110,7 +130,7 @@
                 </a>
               </li>
               <li>
-                <a href="help.html">
+                <a href="#helpModal" class="open_modal">
                   <span class="menu-icon"><img src="img/help-icon.svg" alt=""></span>
                   <span class="menu-text">Служба поддержки</span>
                 </a>
@@ -195,28 +215,6 @@
                       <span>Комиссия 5%.</span>
                       <span>Минимальная сумма вывода 1000 ₽.</span>
                       <span>Максимальная 75 000 ₽.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="home-category">
-            <div class="title-wrapper">
-              <h3>Курс</h3>
-            </div>
-
-            <div class="row">
-              <div class="col-100 mb-20">
-                <div class="tariffs-card">
-                  <div class="tariffs-card__icon bg-red"><img src="img/arrow-download.svg" alt=""></div>
-                  <div class="tariffs-card__body">
-                    <div class="tariffs-card__name"><p>USDT</p></div>
-                    <div class="tariffs-card__description">
-                      <div class="sum-wrapper">
-                        <div class="sum">59.63 ₽</div>
-                        <div class="sum-course">−0.04 (0,06 %)</div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -551,7 +549,8 @@
               <li>Content-Type: text/plain; charset=utf-8</li>
               <li>Via: 1.1 vegur</li>
             </ul>
-            <p>status=1&transaction_id=p632b755803455&service=qw&wallet=%2B791739<br>69455&sum=25.00&fee=0.50&total_sum=25.50&subtract_fee_from_amoun<br>t=0</p>
+            <p>status=1&transaction_id=p632b755803455&service=qw&wallet=%2B791739<br>69455&sum=25.00&fee=0.50&total_sum=25.50&subtract_fee_from_amoun<br>t=0
+            </p>
 
             <p>405 Method Not Allowed</p>
           </div>
@@ -561,24 +560,25 @@
       <div class="info-item">
         <div class="info-item__title">Ответ от вашего сервера</div>
         <div class="info-item__content">
-         <div class="box-text">
-           <ul class="my-ul">
-             <li>HTTP 1.1</li>
-             <li>Server: Cowboy</li>
-             <li>Connection: keep-alive</li>
-             <li>Vary: Origin</li>
-             <li>Date: Wed, 21 Sep 2022 20:54:19 GMT</li>
-             <li>Content-Length: 0</li>
-             <li>Content-Type: text/plain; charset=utf-8</li>
-             <li>Via: 1.1 vegur</li>
-           </ul>
-           <p>status=1&transaction_id=p632b755803455&service=qw&wallet=%2B791739<br>69455&sum=25.00&fee=0.50&total_sum=25.50&subtract_fee_from_amoun<br>t=0</p>
+          <div class="box-text">
+            <ul class="my-ul">
+              <li>HTTP 1.1</li>
+              <li>Server: Cowboy</li>
+              <li>Connection: keep-alive</li>
+              <li>Vary: Origin</li>
+              <li>Date: Wed, 21 Sep 2022 20:54:19 GMT</li>
+              <li>Content-Length: 0</li>
+              <li>Content-Type: text/plain; charset=utf-8</li>
+              <li>Via: 1.1 vegur</li>
+            </ul>
+            <p>status=1&transaction_id=p632b755803455&service=qw&wallet=%2B791739<br>69455&sum=25.00&fee=0.50&total_sum=25.50&subtract_fee_from_amoun<br>t=0
+            </p>
 
-           <p>405 Method Not Allowed</p>
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid at, consectetur deserunt distinctio
-             doloribus earum est ex labore maiores molestiae mollitia obcaecati odio quo quos reprehenderit suscipit?
-             Animi, harum.</p>
-         </div>
+            <p>405 Method Not Allowed</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid at, consectetur deserunt distinctio
+              doloribus earum est ex labore maiores molestiae mollitia obcaecati odio quo quos reprehenderit suscipit?
+              Animi, harum.</p>
+          </div>
 
           <a href="#" class="btn btn-white btn-view-text">Открыть полный ответ</a>
         </div>
@@ -1286,6 +1286,39 @@
       </div>
 
     </form>
+  </div>
+</div>
+
+<div class="modal__div" id="helpModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Служба поддержки</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="modal-title__mobile">Служба поддержки</div>
+
+      <div class="box-text">
+        <p>Если у вас есть вопросы или хотите сообщить о проблеме с продуктом, напишите нам на почту или в наш
+          телеграм. </p>
+      </div>
+
+      <div class="help-box">
+        <h3>Email адрес</h3>
+        <a href="#" class="btn btn-border btn-sm" target="_blank">Написать</a>
+      </div>
+
+      <div class="help-box">
+        <h3>Telegram</h3>
+        <a href="#" class="btn btn-border btn-sm" target="_blank">Написать</a>
+      </div>
+    </div>
+
   </div>
 </div>
 

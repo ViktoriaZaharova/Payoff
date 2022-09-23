@@ -25,14 +25,14 @@ blockquote, q {
   quotes: none; }
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
+  content: "";
   content: none; }
 
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
+body, div#app {
   font-size: 16px;
   min-width: 320px;
   position: relative;
@@ -42,10 +42,10 @@ body {
   background: #fff;
   color: #000; }
 
-html, body {
+html, body, div#app {
   overflow-x: hidden;
   height: 100%; }
-  html.no-scroll, body.no-scroll {
+  html.no-scroll, body.no-scroll, div#app.no-scroll {
     overflow: hidden; }
 
 img {
@@ -79,7 +79,7 @@ input, textarea, select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-  border: 1px solid #E2E2E2;
+  border: 1px solid #e2e2e2;
     border-radius: 8px;
   width: 100%;
   height: 56px;
@@ -277,6 +277,11 @@ button, .btn {
 .btn-md {
   padding: 17px; }
 
+.btn-sm {
+  padding: 9px 16px;
+  font-size: 14px;
+  min-height: 40px; }
+
 .svg-icon {
   display: inline-block;
   width: 100%;
@@ -416,6 +421,41 @@ a.color-accent:hover {
     margin: 0 0 16px; }
     .sidebar-footer .btn:last-child {
       margin: 0; }
+
+.exchange-rate {
+  margin: 0 0 24px;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .exchange-rate__icon {
+    fill: none;
+    width: 16px;
+    height: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .exchange-rate__icon.color-green {
+      stroke: #15B911; }
+    .exchange-rate__icon.color-red {
+      stroke: #FD3131; }
+  .exchange-rate__val {
+    margin: 0 4px; }
+
+.color-green {
+  color: #15B911; }
+
+.color-red {
+  color: #FD3131; }
 
 .btn-close-sidebar {
   display: -webkit-box;
@@ -884,13 +924,13 @@ td {
 
 @-webkit-keyframes preloader-rotate {
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn); } }
 
 @keyframes preloader-rotate {
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn); } }
 
 @-webkit-keyframes preloader-bounce {
   0%,
