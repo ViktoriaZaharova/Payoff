@@ -381,6 +381,8 @@
           justify-content: space-between;
   padding: 24px;
   margin: 12px 0 0; }
+  .copy-file p br {
+    display: none; }
 
 .btn-download {
   background: #fff;

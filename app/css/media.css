@@ -221,7 +221,9 @@
   .info-item__content {
     padding: 20px 24px; }
   .help-box {
-    padding: 16px; } }
+    padding: 16px; }
+  .copy-file p br {
+    display: block; } }
 
 @media only screen and (max-width: 480px) {
   .form-search {
