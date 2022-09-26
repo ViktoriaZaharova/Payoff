@@ -437,6 +437,12 @@
 .table-payments a {
   color: #000; }
 
+.td-name p {
+  text-overflow: ellipsis;
+  width: 140px;
+  overflow: hidden;
+  white-space: nowrap; }
+
 /*==========  section registration end ==========*/
 /*==========  section settings ==========*/
 .settings-box {

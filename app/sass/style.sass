@@ -540,6 +540,12 @@ td
 .dropdown
   position: relative
   cursor: pointer
+  &.show
+    .dropdown-toggle
+      .dropdown-toggle__icon
+        transform: rotate(180deg)
+    .dropdown-menu
+      display: block
 
 .dropdown-menu
   position: absolute
@@ -567,6 +573,8 @@ td
   &__body
     width: 100%
 
+
+
 .dropdown-menu__link
   display: flex
   align-items: center
@@ -590,11 +598,6 @@ td
   &:hover
     color: #fff
     background: #2E2E2E
-
-
-.dropdown-toggle.active
-  .dropdown-toggle__icon
-    transform: rotate(180deg)
 
 
 .dropdown-select

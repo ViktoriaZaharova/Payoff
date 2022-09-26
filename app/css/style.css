@@ -604,6 +604,11 @@ td {
 .dropdown {
   position: relative;
   cursor: pointer; }
+  .dropdown.show .dropdown-toggle .dropdown-toggle__icon {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .dropdown.show .dropdown-menu {
+    display: block; }
 
 .dropdown-menu {
   position: absolute;
@@ -667,10 +672,6 @@ td {
   .dropdown-menu__link:hover {
     color: #fff;
     background: #2E2E2E; }
-
-.dropdown-toggle.active .dropdown-toggle__icon {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg); }
 
 .dropdown-select .dropdown-toggle {
   background: #fff;

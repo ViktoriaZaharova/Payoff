@@ -26,9 +26,8 @@ $('.btn-close-sidebar, .overlay-menu').on('click', function () {
 
 
 $('.dropdown-toggle').click(function () {
-    // $('.dropdown-toggle').removeClass('active');
-    // $('.dropdown-menu').fadeOut();
-    $(this).toggleClass('active').siblings('.dropdown-menu').fadeToggle();
+    $('.dropdown').removeClass('show');
+    $(this).parent().addClass('show');
 });
 
 $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -37,10 +36,10 @@ $(document).mouseup(function (e) { // событие клика по веб-до
     if (!div.is(e.target) // если клик был не по нашему блоку
         && !btn.is(e.target) && btn.has(e.target).length === 0
         && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        div.fadeOut(); // скрываем его
-        btn.removeClass('active');
+        $('.dropdown').removeClass('show');
     }
 });
+
 
 $('.form-search input').on('keyup change', function() {
     if (this.value.length > 0) {
