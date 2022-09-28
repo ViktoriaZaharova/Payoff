@@ -25,23 +25,26 @@ $('.btn-close-sidebar, .overlay-menu').on('click', function () {
 });
 
 
-$('.dropdown-toggle').click(function () {
-    $('.dropdown').removeClass('show');
-    $(this).parent().addClass('show');
+// dropdown menu
+$(function () {
+    $('.dropdown-toggle').click(function () {
+
+        let pd = $(this).parents('.dropdown');
+        $('.dropdown').not(pd).find('.dropdown-toggle').removeClass('active').next('.dropdown-menu').slideUp(200);
+        $(this).toggleClass('active').next('.dropdown-menu').slideToggle();
+    });
+
+    $(document).click(function (e) {
+        var target = e.target;
+        if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle')) {
+            $('.dropdown-menu').slideUp();
+            $('.dropdown-toggle').removeClass('active');
+        }
+    });
 });
 
-$(document).mouseup(function (e) { // событие клика по веб-документу
-    var div = $(".dropdown-menu"); // тут указываем ID элемента
-    var btn = $('.dropdown-toggle');
-    if (!div.is(e.target) // если клик был не по нашему блоку
-        && !btn.is(e.target) && btn.has(e.target).length === 0
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        $('.dropdown').removeClass('show');
-    }
-});
 
-
-$('.form-search input').on('keyup change', function() {
+$('.form-search input').on('keyup change', function () {
     if (this.value.length > 0) {
         $(this).parents('.form-search').addClass('active');
     } else {
@@ -63,7 +66,7 @@ $(function () {
         close = $('.modal__close, .overlay, .btn-close-modal'),
         modal = $('.modal__div');
 
-    open_modal.on('click',function (event) {
+    open_modal.on('click', function (event) {
         event.preventDefault();
 
         modal.css('display', 'none').animate({
@@ -140,7 +143,7 @@ $(window).on('load', function () {
 
 
 $(window).on('load', function () {
-    setTimeout(function() {
+    setTimeout(function () {
         $('.icon-loader-btn').delay(3000).fadeOut();
         $('.btn span:hidden').delay(3000).fadeIn();
     }, 4000);
@@ -148,6 +151,6 @@ $(window).on('load', function () {
 });
 
 $('.btn-view-text').on('click', function () {
-   $(this).parent().find('.box-text').addClass('open');
-   $(this).fadeOut();
+    $(this).parent().find('.box-text').addClass('open');
+    $(this).fadeOut();
 });

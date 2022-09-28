@@ -83,18 +83,18 @@ input, textarea, select {
     border-radius: 8px;
   width: 100%;
   height: 56px;
-  color: #000000;
+  color: #0D1E7D;
   font-size: 16px;
   -webkit-transition: .3s ease;
   transition: .3s ease; }
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
-    color: #000000; }
+    color: #0D1E7D; }
   input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
-    color: #000000; }
+    color: #0D1E7D; }
   input::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder {
-    color: #000000; }
+    color: #0D1E7D; }
   input::placeholder, textarea::placeholder, select::placeholder {
-    color: #000000; }
+    color: #0D1E7D; }
   input:hover, input:focus, textarea:hover, textarea:focus, select:hover, select:focus {
     outline: none;
     -webkit-box-shadow: none;
@@ -338,6 +338,9 @@ h3 {
 a.color-accent:hover {
   color: #000; }
 
+.color-grey {
+  color: #646464; }
+
 .container {
   padding: 0 24px;
   max-width: 1440px;
@@ -543,7 +546,7 @@ table {
   border-collapse: collapse;
   border-style: hidden;
   border-radius: 16px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px; }
   table .tooltip-wrapper {
     margin: 5px 8px; }
@@ -598,17 +601,12 @@ td {
   background: #FFF8E8; }
 
 .status-error {
-  background: #FFECEC;
-  color: #FD3131; }
+  color: #FD3131;
+  background: #FFECEC; }
 
 .dropdown {
   position: relative;
   cursor: pointer; }
-  .dropdown.show .dropdown-toggle .dropdown-toggle__icon {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-  .dropdown.show .dropdown-menu {
-    display: block; }
 
 .dropdown-menu {
   position: absolute;
@@ -670,8 +668,8 @@ td {
     height: 24px;
     min-width: 24px; }
   .dropdown-menu__link:hover {
-    color: #fff;
-    background: #2E2E2E; }
+    color: #000000;
+    background: #F6F6F6; }
 
 .dropdown-select .dropdown-toggle {
   background: #fff;
@@ -711,6 +709,10 @@ td {
 
 .input-password.click {
   border: 1.5px solid #142893; }
+
+.dropdown-toggle.active .dropdown-toggle__icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 .dropdown-sorting .dropdown-toggle {
   display: -webkit-box;

@@ -33,7 +33,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 24px;
+  width: 20px;
   margin: 0 0 0 8px; }
 
 .tooltip-wrapper {
@@ -116,7 +116,7 @@
 .menu {
   font-size: 14px;
   font-weight: 600;
-  max-width: 224px;
+  max-width: 232px;
   width: 100%;
   margin: 0 0 0 -16px; }
   .menu li {
@@ -362,6 +362,30 @@
     .list-payment-details li:last-child {
       margin: 0; }
 
+.list-payment-order {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 14px;
+  font-weight: 500; }
+  .list-payment-order li {
+    width: 50%;
+    margin: 0 0 32px; }
+    .list-payment-order li:last-child {
+      margin: 0; }
+  .list-payment-order p {
+    margin: 0 0 8px;
+    color: #646464; }
+
 .form-search {
   width: 100%; }
 
@@ -436,6 +460,18 @@
 
 .table-payments a {
   color: #000; }
+
+.table-payments .status-on {
+  color: #15B911; }
+
+.table-payments .status-process {
+  color: #E1A304; }
+
+.table-payments .status-error {
+  color: #FD3131; }
+
+.table-payments .status-off {
+  color: #646464; }
 
 .td-name p {
   text-overflow: ellipsis;

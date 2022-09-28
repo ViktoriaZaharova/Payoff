@@ -19,7 +19,7 @@
 
 .btn-reverse
   @include d-flex
-  width: 24px
+  width: 20px
   margin: 0 0 0 8px
 
 .tooltip-wrapper
@@ -83,7 +83,7 @@
 .menu
   font-size: 14px
   font-weight: 600
-  max-width: 224px
+  max-width: 232px
   width: 100%
   margin: 0 0 0 -16px
   li
@@ -284,6 +284,24 @@
     &:last-child
       margin: 0
 
+.list-payment-order
+  width: 100%
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  justify-content: space-between
+  font-size: 14px
+  font-weight: 500
+  li
+    width: 50%
+    margin: 0 0 32px
+    &:last-child
+      margin: 0
+  p
+    margin: 0 0 8px
+    color: #646464
+
+
 .form-search
   width: 100%
 
@@ -347,6 +365,14 @@
 .table-payments
   a
     color: #000
+  .status-on
+    color: #15B911
+  .status-process
+    color: #E1A304
+  .status-error
+    color: #FD3131
+  .status-off
+    color: #646464
 
 .td-name
   p
