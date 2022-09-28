@@ -448,59 +448,112 @@
     <div class="modal__div-body">
       <div class="modal-title__mobile">Пополнить баланс</div>
 
-      <div class="form-row">
-        <div class="input-title">
-          <p>Проект</p>
+      <div class="tabs">
+        <ul class="tabs__caption my-ul">
+          <li class="active">
+            <p>TRC20</p>
+          </li>
+          <li>
+            <p>Garantex</p>
+          </li>
+        </ul>
+
+        <div class="tabs__content active">
+          <div class="form-row">
+            <div class="input-title">
+              <p>Проект</p>
+            </div>
+            <div class="dropdown dropdown-select">
+              <div class="dropdown-toggle">Выбрать проект...
+                <div class="dropdown-toggle__icon"></div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-menu__link">
+                  <span class="dropdown-menu__link-text">QIWI</span>
+                </a>
+                <a href="#" class="dropdown-menu__link">
+                  <span class="dropdown-menu__link-text">YooMoney</span>
+                </a>
+                <a href="#" class="dropdown-menu__link">
+                  <span class="dropdown-menu__link-text">Банковская карта</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-balance">
+            <p>Ваш USDT (TRC-20)
+              адрес</p>
+
+            <div class="qr-image"><img src="img/qr.svg" alt=""></div>
+
+            <div class="qr-code">TPk6cEqDWFcYKNyAuLC2FhNRknPW7qeYfg</div>
+            <div class="qr-code qr-code-mobile">TPk6cEqDWFcYKNyAuLC2<br>FhNRknPW7qeYfg</div>
+
+            <div class="course-currency">
+              <p>Курс USDT</p>
+              <div class="sum-wrapper">
+                <div class="sum">59.63 ₽</div>
+                <div class="sum-course">−0.04 (0,06 %)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="description-attention">
+            <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
+            <div class="description-attention__text">
+              <p>Минимальная сумма пополнения 15 USDT</p>
+            </div>
+          </div>
+
+          <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">
+            <svg class="svg-icon icon-loader-btn">
+              <use xlink:href="img/sprite.svg#loader"></use>
+            </svg>
+            <span>Пополнить баланс</span>
+          </a>
         </div>
-        <div class="dropdown dropdown-select">
-          <div class="dropdown-toggle">Выбрать проект...
-            <div class="dropdown-toggle__icon"></div>
+        <div class="tabs__content">
+          <div class="form-row">
+            <div class="input-title">
+              <p>Проект</p>
+            </div>
+            <div class="dropdown dropdown-select">
+              <div class="dropdown-toggle">Выбрать проект...
+                <div class="dropdown-toggle__icon"></div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-menu__link">
+                  <span class="dropdown-menu__link-text">QIWI</span>
+                </a>
+                <a href="#" class="dropdown-menu__link">
+                  <span class="dropdown-menu__link-text">YooMoney</span>
+                </a>
+                <a href="#" class="dropdown-menu__link">
+                  <span class="dropdown-menu__link-text">Банковская карта</span>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="dropdown-menu">
-            <a href="#" class="dropdown-menu__link">
-              <span class="dropdown-menu__link-text">QIWI</span>
-            </a>
-            <a href="#" class="dropdown-menu__link">
-              <span class="dropdown-menu__link-text">YooMoney</span>
-            </a>
-            <a href="#" class="dropdown-menu__link">
-              <span class="dropdown-menu__link-text">Банковская карта</span>
-            </a>
+          <div class="form-row">
+            <div class="input-title">
+              <p>Код-гарантекс</p>
+            </div>
+            <label>
+              <input type="text" name="code" required>
+            </label>
           </div>
+
+          <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">
+            <svg class="svg-icon icon-loader-btn">
+              <use xlink:href="img/sprite.svg#loader"></use>
+            </svg>
+            <span>Подтвердить</span>
+          </a>
         </div>
       </div>
 
-      <div class="add-balance">
-        <p>Ваш USDT (TRC-20)
-          адрес</p>
 
-        <div class="qr-image"><img src="img/qr.svg" alt=""></div>
-
-        <div class="qr-code">TPk6cEqDWFcYKNyAuLC2FhNRknPW7qeYfg</div>
-        <div class="qr-code qr-code-mobile">TPk6cEqDWFcYKNyAuLC2<br>FhNRknPW7qeYfg</div>
-
-        <div class="course-currency">
-          <p>Курс USDT</p>
-          <div class="sum-wrapper">
-            <div class="sum">59.63 ₽</div>
-            <div class="sum-course">−0.04 (0,06 %)</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="description-attention">
-        <div class="description-attention__icon"><img src="img/alert-icon.svg" alt=""></div>
-        <div class="description-attention__text">
-          <p>Минимальная сумма пополнения 15 USDT</p>
-        </div>
-      </div>
-
-      <a href="#addBalance" class="btn btn-accent btn-md open_modal btn-submit">
-        <svg class="svg-icon icon-loader-btn">
-          <use xlink:href="img/sprite.svg#loader"></use>
-        </svg>
-        <span>Пополнить баланс</span>
-      </a>
     </div>
 
   </div>
