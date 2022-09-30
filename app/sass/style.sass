@@ -833,5 +833,31 @@ td
 .loaded .preloader
   display: none
 
+.checkbox
+  width: 100%
+  display: flex
+  align-items: center
+  font-size: 16px
+  cursor: pointer
+  input
+    display: none
+    &:checked + .checkbox-custom
+      background: $accent url("../img/checkbox.svg") no-repeat center
+        size: 12px
+      border-color: $accent
+
+
+.checkbox-custom
+  margin: 0 12px 0 0
+  width: 18px
+  height: 18px
+  min-width: 18px
+  @include d-flex
+  position: relative
+  transition: .3s ease
+  border: 1px solid #E2E2E2
+    radius: 4px
+
+
 
 
