@@ -578,11 +578,14 @@
   .list-stages .checkbox {
     padding: 16px 0;
     font-size: 16px;
-    font-weight: 500; }
-    .list-stages .checkbox input:checked + .checkbox-custom {
+    font-weight: 500;
+    color: #000000; }
+    .list-stages .checkbox.checkbox-checked .checkbox-custom {
       background: #15B911 url("../img/checkbox.svg") no-repeat center;
         background-size: 14px;
       border-color: #15B911; }
+    .list-stages .checkbox:hover {
+      color: #142893; }
   .list-stages .checkbox-custom {
     border-radius: 50%;
     width: 24px;

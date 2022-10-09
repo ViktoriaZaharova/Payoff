@@ -460,17 +460,22 @@
     padding: 16px 0
     font-size: 16px
     font-weight: 500
-    input
-      &:checked + .checkbox-custom
+    color: #000000
+    &.checkbox-checked
+      .checkbox-custom
         background: #15B911 url("../img/checkbox.svg") no-repeat center
           size: 14px
         border-color: #15B911
+    &:hover
+      color: $accent
   .checkbox-custom
     border-radius: 50%
     width: 24px
     height: 24px
     min-width: 24px
     margin: 0 16px auto 0
+
+
 
 
 .checkbox-icon
