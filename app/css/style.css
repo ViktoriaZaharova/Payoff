@@ -506,6 +506,14 @@ a.color-accent:hover {
           justify-content: center;
   margin: 0 0 0 11px; }
 
+.link-close {
+  color: #142893; }
+  .link-close .link-icon {
+    stroke: #142893;
+    width: 16px;
+    height: 16px;
+    margin: 0 4px 0 0; }
+
 .color-accent {
   color: #142893; }
   .color-accent:hover {

@@ -223,7 +223,36 @@
   .help-box {
     padding: 16px; }
   .copy-file p br {
-    display: block; } }
+    display: block; }
+  .description-instruction {
+    padding: 16px; }
+    .description-instruction .btn-group .btn {
+      width: 100%;
+      margin: 0 0 12px; }
+      .description-instruction .btn-group .btn:last-child {
+        margin: 0; }
+  .file {
+    width: 100%; }
+  .error-wrapper-box {
+    margin: 16px 0 0; }
+    .error-wrapper-box p {
+      margin: 0 0 12px; }
+    .error-wrapper-box:last-child {
+      margin: 16px 0 0; }
+  .error-title {
+    margin: 0; }
+  #payModalSuccess .modal-title__mobile {
+    text-align: center; }
+  #payModalSuccess .modal__close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  #payModalSuccess .modal-title___icon {
+    display: none; }
+  #payModalSuccess .modal-title__mobile-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; } }
 
 @media only screen and (max-width: 480px) {
   .form-search {

@@ -403,6 +403,9 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  .btn-download:hover .btn-download__icon {
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1); }
 
 .link-web br {
   display: none; }
