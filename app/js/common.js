@@ -110,6 +110,20 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
 });
 
 
+$(document).ready(function ($) {
+    $('.tabs-wrap li a').click(function (e) {
+        e.preventDefault();
+    });
+    $('.tabs-wrap li').click(function () {
+        $('.tabs-wrap li').removeClass('active');
+        $(this).addClass('active').closest('.tabs-wrap').find('.tab_content').removeClass('active');
+
+        var selectTab = $(this).find('a').attr("href");
+
+        $(selectTab).addClass('active');
+    });
+});
+
 // активная ссылка меню
 $('.menu li a').each(function () {
     let location = window.location.href;

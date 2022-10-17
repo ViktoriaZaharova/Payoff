@@ -803,3 +803,24 @@
 
 #payModalSuccess .btn {
   width: 100%; }
+
+.home-history .pagination {
+  margin: 16px 0 0; }
+
+.home-history .form-search {
+  margin: 0 16px 0 0; }
+
+.btn-csv {
+  margin: 0 0 0 auto; }
+
+.table-history-list .td-date {
+  width: 15%; }
+
+.table-history-list .td-sum {
+  width: 25%; }
+
+.table-history-list .td-icon {
+  width: 7%; }
+
+.table-history-list .tooltip-wrapper {
+  margin: 5px 24px 5px; }

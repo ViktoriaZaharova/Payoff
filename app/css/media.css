@@ -139,7 +139,23 @@
     .settings-box__footer {
       width: 100%;
       padding: 0 0 0 72px;
-      margin: 16px 0 0; } }
+      margin: 16px 0 0; }
+  .table-history-list td {
+    display: none; }
+  .table-history-list .td-date, .table-history-list .td-sum {
+    display: block;
+    width: 100%;
+    color: #646464;
+    font-size: 14px;
+    font-weight: 500; }
+  .table-history-list .td-sum {
+    color: #000;
+    margin: 8px 0 0;
+    font-size: 24px;
+    font-weight: 500;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {

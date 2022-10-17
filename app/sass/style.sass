@@ -686,16 +686,16 @@ td
     &:last-child
       margin: 0 0 24px
 
-.tabs
+.tabs, .tabs-wrap, .tab_container
   width: 100%
 
-.tabs__content
+.tabs__content, .tab_content
   display: none
-
+  width: 100%
   &.active
     display: block
 
-.tabs__caption
+.tabs__caption, .tabs-list
   width: 100%
   display: flex
   align-items: center
@@ -711,7 +711,8 @@ td
     margin: 0 32px 0 0
     display: flex
     align-items: center
-
+    font-weight: 600
+    color: #646464
     &:last-child
       margin: 0
 
@@ -726,8 +727,16 @@ td
       transition: .3s ease
 
     &.active
+      color: #000000
+      a
+        color: #000
       &:before
         width: 100%
+    a
+      color: #646464
+      &:hover
+        color: #000
+
 
 
 .pagination
