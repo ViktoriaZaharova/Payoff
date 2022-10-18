@@ -110,20 +110,6 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
 });
 
 
-$(document).ready(function ($) {
-    $('.tabs-wrap li a').click(function (e) {
-        e.preventDefault();
-    });
-    $('.tabs-wrap li').click(function () {
-        $('.tabs-wrap li').removeClass('active');
-        $(this).addClass('active').closest('.tabs-wrap').find('.tab_content').removeClass('active');
-
-        var selectTab = $(this).find('a').attr("href");
-
-        $(selectTab).addClass('active');
-    });
-});
-
 // активная ссылка меню
 $('.menu li a').each(function () {
     let location = window.location.href;
@@ -167,4 +153,61 @@ $(window).on('load', function () {
 $('.btn-view-text').on('click', function () {
     $(this).parent().find('.box-text').addClass('open');
     $(this).fadeOut();
+});
+
+
+// new js
+$(document).ready(function ($) {
+    $('.tabs-wrap li a').click(function (e) {
+        e.preventDefault();
+    });
+    $('.tabs-wrap li').click(function () {
+        $('.tabs-wrap li').removeClass('active');
+        $(this).addClass('active').closest('.tabs-wrap').find('.tab_content').removeClass('active');
+
+        var selectTab = $(this).find('a').attr("href");
+
+        $(selectTab).addClass('active');
+    });
+});
+
+
+$.datepicker.setDefaults(
+    {
+        closeText: 'Закрыть',
+        prevText: '',
+        currentText: 'Сегодня',
+        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+        monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
+            'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        weekHeader: 'Не',
+        dateFormat: 'dd.mm.yy',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    });
+
+
+$(function() {
+    $('.datepicker').datepicker({
+        range: 'period', // режим - выбор периода
+        numberOfMonths: 2,
+        onSelect: function(dateText, inst, extensionRange) {
+            // extensionRange - объект расширения
+            $('.startDate').html(extensionRange.startDateText);
+            $('.endDate').html(extensionRange.endDateText);
+        }
+    });
+
+    $('.datepicker').datepicker('setDate', ['+4d', '+8d']);
+
+    // объект расширения (хранит состояние календаря)
+    var extensionRange = $('.datepicker').datepicker('widget').data('datepickerExtensionRange');
+    if(extensionRange.startDateText) $('.startDate').html(extensionRange.startDateText);
+    if(extensionRange.endDateText) $('.endDate').html(extensionRange.endDateText);
 });

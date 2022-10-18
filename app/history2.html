@@ -17,7 +17,7 @@
   <!-- iOS Safari -->
   <meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -375,10 +375,10 @@
                       </table>
                     </div>
                     <div id="tab2" class="tab_content">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex suscipit, cupiditate voluptatum
-                       facere, quis quibusdam, velit impedit nisi veritatis explicabo cumque at. Facere blanditiis
-                       quisquam dolorum, itaque consequuntur, sequi distinctio assumenda!
-                       Nisi laboriosam fugit, aliquid esse amet itaque consequuntur ratione?</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex suscipit, cupiditate voluptatum
+                        facere, quis quibusdam, velit impedit nisi veritatis explicabo cumque at. Facere blanditiis
+                        quisquam dolorum, itaque consequuntur, sequi distinctio assumenda!
+                        Nisi laboriosam fugit, aliquid esse amet itaque consequuntur ratione?</p>
                     </div>
                     <div id="tab3" class="tab_content">
                       <div class="sorting-wrapper">
@@ -393,7 +393,7 @@
                             <a href="#" class="dropdown-menu__link">
                               <span class="dropdown-menu__link-text">Последние 30 дней</span>
                             </a>
-                            <a href="#" class="dropdown-menu__link">
+                            <a href="#calendarModal" class="dropdown-menu__link open_modal">
                               <span class="dropdown-menu__link-text">Свой интервал</span>
                             </a>
                           </div>
@@ -504,35 +504,50 @@
                     </button>
                   </form>
 
-                  <div class="dropdown dropdown-sorting">
-                    <div class="dropdown-toggle">Проект
-                      <div class="dropdown-toggle__icon"></div>
+                  <div class="sorting-row">
+                    <div class="dropdown dropdown-sorting">
+                      <div class="dropdown-toggle">Проект
+                        <div class="dropdown-toggle__icon"></div>
+                      </div>
+                      <div class="dropdown-menu">
+                        <a href="#" class="dropdown-menu__link">
+                          <span class="dropdown-menu__link-text">Криптопроект</span>
+                        </a>
+                        <a href="#" class="dropdown-menu__link">
+                          <span class="dropdown-menu__link-text">Длинное назв...</span>
+                        </a>
+                      </div>
                     </div>
-                    <div class="dropdown-menu">
-                      <a href="#" class="dropdown-menu__link">
-                        <span class="dropdown-menu__link-text">Криптопроект</span>
-                      </a>
-                      <a href="#" class="dropdown-menu__link">
-                        <span class="dropdown-menu__link-text">Длинное назв...</span>
+                    <div class="dropdown dropdown-sorting">
+                      <div class="dropdown-toggle">Период
+                        <div class="dropdown-toggle__icon"></div>
+                      </div>
+                      <div class="dropdown-menu">
+                        <a href="#" class="dropdown-menu__link">
+                          <span class="dropdown-menu__link-text">За вчера</span>
+                        </a>
+                        <a href="#" class="dropdown-menu__link">
+                          <span class="dropdown-menu__link-text">Последние 30 дней</span>
+                        </a>
+                        <a href="#calendarModal" class="dropdown-menu__link open_modal">
+                          <span class="dropdown-menu__link-text">Свой интервал</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="datepicker-result">
+                      <div class="startDate"></div>
+                      <div class="endDate"></div>
+                      <!--                    <input name="startDate" disabled>-->
+                      <!--                    <input name="endDate" disabled>-->
+                      <a href="#" class="clear-result">
+                        <svg class="svg-icon">
+                          <use xlink:href="img/sprite.svg#close"></use>
+                        </svg>
                       </a>
                     </div>
                   </div>
-                  <div class="dropdown dropdown-sorting">
-                    <div class="dropdown-toggle">Период
-                      <div class="dropdown-toggle__icon"></div>
-                    </div>
-                    <div class="dropdown-menu">
-                      <a href="#" class="dropdown-menu__link">
-                        <span class="dropdown-menu__link-text">За вчера</span>
-                      </a>
-                      <a href="#" class="dropdown-menu__link">
-                        <span class="dropdown-menu__link-text">Последние 30 дней</span>
-                      </a>
-                      <a href="#" class="dropdown-menu__link">
-                        <span class="dropdown-menu__link-text">Свой интервал</span>
-                      </a>
-                    </div>
-                  </div>
+
+
 
                   <a href="#" class="btn btn-grey btn-sm btn-csv">
                     <span class="btn-download__icon"><img src="img/download.svg" alt=""></span>
@@ -1474,11 +1489,39 @@
 </div>
 
 
+<div class="modal__div modal__div-v3" id="calendarModal">
+  <div class="modal__wrapper">
+    <div class="modal__div-head">
+      <h2>Свой интервал</h2>
+      <div class="modal__close">
+        <svg class="svg-icon">
+          <use xlink:href="img/sprite.svg#close"></use>
+        </svg>
+      </div>
+    </div>
+
+    <div class="modal__div-body">
+      <div class="datepicker"></div>
+    </div>
+
+    <div class="modal__div-footer">
+      <div class="btn-group">
+        <a href="#" class="btn btn-grey">Отмена</a>
+        <a href="#" class="btn btn-accent">Применить</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
 <!-- Пoдлoжкa -->
 <div class="overlay"></div>
 <div class="overlay-menu"></div>
 
 <script src="js/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script src="js/jquery.datepicker.extension.range.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>
