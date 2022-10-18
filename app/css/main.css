@@ -1001,6 +1001,8 @@
       border-radius: 50%; }
     .datepicker .selected-end.selected-start {
       border-radius: 50%; }
+  .datepicker .ui-datepicker table {
+    margin: 0; }
 
 .sorting-row {
   display: -webkit-box;

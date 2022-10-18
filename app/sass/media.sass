@@ -181,6 +181,10 @@
   //.datepicker .ui-datepicker th
   //  padding: 10px
 
+  .datepicker
+    max-width: 340px
+    margin: 0 auto
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px)
   .modal__div
@@ -324,6 +328,17 @@
     .modal-title__mobile-icon
       display: flex
 
+  #calendarModal
+    .modal__div-footer
+      .btn-group
+        flex-direction: column-reverse
+        .btn
+          width: 100%
+          margin: 0
+          &:last-child
+            margin: 0 0 16px
+
+
 @media only screen and (max-width: 480px)
   .form-search
     max-width: 186px
@@ -349,3 +364,5 @@
   .btn-csv
     padding: 9px 12px
 
+  .datepicker .ui-state-default, .datepicker .ui-widget-content .ui-state-default, .datepicker .ui-datepicker th
+    padding: 11px

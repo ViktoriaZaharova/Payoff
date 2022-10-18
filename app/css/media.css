@@ -161,7 +161,10 @@
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin: 18px 0 0; } }
+    margin: 18px 0 0; }
+  .datepicker {
+    max-width: 340px;
+    margin: 0 auto; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
@@ -274,7 +277,17 @@
   #payModalSuccess .modal-title__mobile-icon {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex; }
+  #calendarModal .modal__div-footer .btn-group {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+    #calendarModal .modal__div-footer .btn-group .btn {
+      width: 100%;
+      margin: 0; }
+      #calendarModal .modal__div-footer .btn-group .btn:last-child {
+        margin: 0 0 16px; } }
 
 @media only screen and (max-width: 480px) {
   .form-search {
@@ -297,4 +310,6 @@
   .form-search {
     max-width: 170px; }
   .btn-csv {
-    padding: 9px 12px; } }
+    padding: 9px 12px; }
+  .datepicker .ui-state-default, .datepicker .ui-widget-content .ui-state-default, .datepicker .ui-datepicker th {
+    padding: 11px; } }

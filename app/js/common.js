@@ -204,6 +204,26 @@ $(function() {
         }
     });
 
+
+    var debounce;
+    $(window).resize(function() {
+        clearTimeout(debounce);
+        if ($(window).width() < 768) {
+            debounce = setTimeout(function() {
+                debounceDatepicker(1)
+            }, 250);
+        } else {
+            debounce = setTimeout(function() {
+                debounceDatepicker(2)
+            }, 250);
+        }
+    }).trigger('resize');
+
+    function debounceDatepicker(no) {
+        $(".datepicker").datepicker("option", "numberOfMonths", no);
+    }
+
+
     $('.datepicker').datepicker('setDate', ['+4d', '+8d']);
 
     // объект расширения (хранит состояние календаря)
@@ -211,3 +231,4 @@ $(function() {
     if(extensionRange.startDateText) $('.startDate').html(extensionRange.startDateText);
     if(extensionRange.endDateText) $('.endDate').html(extensionRange.endDateText);
 });
+
